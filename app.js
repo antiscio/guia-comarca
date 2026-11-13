@@ -201,7 +201,8 @@
     },
     {
       id: "conoce", titulo: "Conocé la Comarca Andina del Paralelo 42", icono: "leaf",
-      render: () => CONOCE.map((b) => card(b.titulo, foto(b.foto) + b.texto.map(p).join(""))).join(""),
+      // La foto va arriba y ocupa todo el ancho de la tarjeta, como en Paseos
+      render: () => CONOCE.map((b) => `<section class="card">${b.foto ? foto(b.foto) : ""}<h3>${esc(b.titulo)}</h3>${b.texto.map(p).join("")}</section>`).join(""),
     },
   ];
 

@@ -198,6 +198,8 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
 .card h3 + .foto-lugar, .card h3 + .foto-lugar figcaption { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
 .foto-par { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
 .foto-par img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.card > .foto-par:first-child { margin: -16px -16px 4px; gap: 3px; border-radius: var(--radio) var(--radio) 0 0; overflow: hidden; }
+.card > .foto-par:first-child img { border-radius: 0; }
 
 /* ---------- aviso para guardar en la pantalla de inicio ---------- */
 .aviso-fondo {
