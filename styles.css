@@ -91,7 +91,7 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
 .tabs::-webkit-scrollbar { display: none; }
 .tabs a {
   flex: none; padding: 8px 14px; border-radius: 999px; text-decoration: none; font-size: 14px;
-  border: 1px solid var(--line); background: var(--surface); color: var(--muted);
+  border: 1px solid var(--acento); background: var(--surface); color: var(--acento); /* borde marcado para que se vean las pestañas */
 }
 .tabs a.activa { background: var(--acento); border-color: var(--acento); color: #fff; }
 .contenido { padding: 14px 16px 40px; display: flex; flex-direction: column; gap: 10px; animation: aparecer .3s ease both; }
