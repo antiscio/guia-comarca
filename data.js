@@ -272,9 +272,9 @@ const PASEOS = [
     maps: maps("Cascada Corbata Blanca, El Hoyo"),
   },
   {
-    nombre: "Estupa budista de Epuyén", lugar: "Epuyén",
+    nombre: "Stupa budista de Epuyén", lugar: "Epuyén",
     puntos: ["Antes de entrar a Epuyén desde El Hoyo, del lado este de la Ruta 40, señalizada.", "Libre y gratuita."],
-    maps: maps("Estupa budista, Epuyén"),
+    maps: maps("Stupa budista, Epuyén"),
   },
   {
     nombre: "Centro Cultural Antú Quillén", foto: "epuyen", lugar: "Lago Epuyén",
