@@ -167,6 +167,9 @@ const FOTOS = {
   "valle": {
     "src": "../img/fotos/valle.jpg"
   },
+  "cerro-amigo": {
+    "src": "../img/fotos/cerro-amigo.jpg"
+  },
   "otono": {
     "src": "../img/fotos/otono.jpg"
   },
@@ -182,7 +185,7 @@ const FOTOS = {
 // Paseos compartidos. Las distancias son las del contenido (desde el centro de El Bolsón cuando así figura).
 const PASEOS = [
   {
-    nombre: "Cerro Amigo", lugar: "El Bolsón",
+    nombre: "Cerro Amigo", foto: "cerro-amigo", lugar: "El Bolsón",
     puntos: ["Miradores al valle; caminata corta y fácil.", "La entrada vale por una semana.", "Abierto todo el año."],
     maps: maps("Cerro Amigo, El Bolsón"),
   },
