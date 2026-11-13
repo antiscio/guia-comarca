@@ -1,6 +1,6 @@
 // Guarda la app en el celular para que funcione sin señal.
 // Al cambiar cualquier contenido, subir el número de versión para que los huéspedes reciban lo nuevo.
-const VERSION = "guia-v58";
+const VERSION = "guia-v59";
 const ARCHIVOS = [
   "./styles.css", "./data.js", "./app.js",
   "./casis/", "./casis/index.html", "./casis/manifest.webmanifest",
@@ -30,8 +30,10 @@ self.addEventListener("fetch", (e) => {
   if (!propio && !fuente) return;
 
   // Primero la red (contenido actualizado); sin señal, lo guardado.
+  // Los archivos propios se piden siempre revisando si cambiaron (GitHub Pages los guarda 10 min).
+  const pedido = propio ? new Request(e.request, { cache: "no-cache" }) : e.request;
   e.respondWith(
-    fetch(e.request)
+    fetch(pedido)
       .then((r) => {
         if (r.ok || r.type === "opaque") {
           const copia = r.clone();
