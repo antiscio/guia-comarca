@@ -246,7 +246,8 @@ const ALOJAMIENTOS = {
     tipo: "Departamento en El Bolsón",
     logo: "../img/logo-casis.svg",   // provisorio
     localidad: "El Bolsón",
-    mapsUrl: "",      // PENDIENTE: enlace de Google Maps a la puerta exacta
+    mapsUrl: "https://maps.app.goo.gl/n6RDUL5sApuxFNHc9",
+    indicaciones: ["Primer piso, sobre la cafetería.", "Departamento 10."],
     fotoFachada: "",  // PENDIENTE: foto de la fachada (carpeta Fotos/Departamento El Bolsón)
     instagram: "alquilerturistico_elbolson",
     booking: "https://www.booking.com/hotel/ar/departamento-70mts2-4personas.es.html",

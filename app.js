@@ -42,6 +42,7 @@
       id: "ubicacion", titulo: "Ubicación y cómo llegar", icono: "pin",
       render: () =>
         (A.fotoFachada ? `<img class="foto" src="${esc(A.fotoFachada)}" alt="Fachada de ${esc(A.nombre)}">` : "") +
+        (A.indicaciones ? card("", lista(A.indicaciones)) : "") +
         (A.mapsUrl
           ? `<a class="btn-primario" href="${esc(A.mapsUrl)}" target="_blank" rel="noopener">${ICON.pin} Abrir en Google Maps</a>`
           : `<p class="pendiente">Enlace de Google Maps pendiente.</p>`),
