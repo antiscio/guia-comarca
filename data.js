@@ -249,7 +249,7 @@ const ALOJAMIENTOS = {
     mapsUrl: "",      // PENDIENTE: enlace de Google Maps a la puerta exacta
     fotoFachada: "",  // PENDIENTE: foto de la fachada (carpeta Fotos/Departamento El Bolsón)
     instagram: "alquilerturistico_elbolson",
-    booking: "",      // PENDIENTE: enlace para dejar la reseña en Booking
+    booking: "https://www.booking.com/hotel/ar/departamento-70mts2-4personas.es.html",
     wifi: { red: "COOPETEL_912151", clave: "red508ab" },
     reglamento: [
       "No se fuma adentro.",
