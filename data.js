@@ -400,7 +400,8 @@ const CONOCE = [
   {
     titulo: "Nieve", foto: "piltri-nieve",
     texto: [
-      "En invierno, el cerro Perito Moreno, a unos 25 km, es el centro de esquí de la Comarca. Más información en Actividades → Invierno.",
+      "En invierno, el cerro Perito Moreno, a unos 25 km, es el centro de esquí de la Comarca.",
+      "En el Piltriquitrón (el de la foto) también se puede subir a la nieve: al refugio y al Bosque Tallado nevado. Más información en Actividades → Invierno.",
     ],
   },
 ];
