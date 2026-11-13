@@ -29,7 +29,6 @@
   --azul: #24557d;
   --ink: #1d3a57;           /* letras en azul */
   --muted: #4d5e6e;
-  --sans: "Overpass", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 [data-alojamiento="ginkgo"] .logo { border-radius: 50%; box-shadow: 0 0 0 1.5px #f2b941, 0 14px 34px -16px rgba(23, 52, 79, .55); }
 [data-alojamiento="ginkgo"] .bienvenida .logo { width: 210px; }
