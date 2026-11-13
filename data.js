@@ -312,6 +312,10 @@ const ACTIVIDADES = [
   { nombre: "Trekking con guía", texto: "Con guías habilitados de turismo. La lista se consulta en la oficina de informes.", informes: true },
   { nombre: "Alquiler de bicicletas", texto: "", informes: true },
   {
+    nombre: "Esquí (en invierno)", texto: "En el Cerro Perito Moreno, a unos 25 km: esquí, trineo, raquetas y aerosilla. Más información en la pestaña Invierno.",
+    lugares: [{ nombre: "Cerro Perito Moreno", maps: maps("Cerro Perito Moreno, El Bolsón") }],
+  },
+  {
     nombre: "Tirolesa", texto: "",
     lugares: [
       { nombre: "Parque Aéreo Kona (Las Golondrinas)", maps: maps("Parque Aéreo Kona, Las Golondrinas") },
