@@ -1,5 +1,6 @@
 (function () {
   const A = ALOJAMIENTOS[window.ALOJAMIENTO];
+  const C = A.contacto || FRANCISCO; // quién atiende a los huéspedes
   const app = document.getElementById("app");
   document.documentElement.dataset.alojamiento = A.id;
 
@@ -78,10 +79,12 @@
     {
       id: "contacto", titulo: "Contacto", icono: "phone",
       render: () =>
-        card(FRANCISCO.nombre, `<p class="grande">${esc(FRANCISCO.telefono)}</p>
+        card(C.nombre, C.tel
+          ? `<p class="grande">${esc(C.telefono)}</p>
           <div class="acciones">
-            <a class="btn-primario" href="${waHref(FRANCISCO.tel)}" target="_blank" rel="noopener">${ICON.wa} Escribir por WhatsApp</a>
-          </div>`) +
+            <a class="btn-primario" href="${waHref(C.tel)}" target="_blank" rel="noopener">${ICON.wa} Escribir por WhatsApp</a>
+          </div>`
+          : `<p class="pendiente">Teléfono pendiente.</p>`) +
         card("Seguinos en Instagram",
           A.instagram
             ? `<a class="btn-secundario" href="https://instagram.com/${esc(A.instagram)}" target="_blank" rel="noopener">${ICON.ig} @${esc(A.instagram)}</a>`
@@ -89,7 +92,7 @@
     },
     {
       id: "wifi", titulo: "Wifi", icono: "wifi",
-      render: () =>
+      render: () => !A.wifi.red ? `<p class="pendiente">Nombre de la red y contraseña pendientes.</p>` :
         `<div class="wifi">
           <span class="etq">Red</span><p class="grande">${esc(A.wifi.red)}</p>
           <span class="etq">Contraseña</span><p class="grande mono">${esc(A.wifi.clave)}</p>
@@ -97,6 +100,7 @@
         </div>`,
       despues: () => {
         const b = document.getElementById("copiar");
+        if (!b) return;
         b.onclick = async () => {
           try { await navigator.clipboard.writeText(A.wifi.clave); }
           catch {
@@ -207,7 +211,7 @@
     return `<main class="bienvenida">
       ${logo}
       <p class="tipo">${esc(A.tipo)}</p>
-      <p class="texto-bienvenida">${esc(BIENVENIDA)}</p>
+      <p class="texto-bienvenida">${esc(BIENVENIDA.replace("Francisco", C.nombre))}</p>
       <a class="btn-primario grande" href="#menu">Ver la guía</a>
     </main>`;
   }

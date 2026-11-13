@@ -1,0 +1,16 @@
+{
+  "name": "Ginkgo · Guía para huéspedes",
+  "short_name": "Ginkgo",
+  "description": "Departamento en El Bolsón",
+  "lang": "es",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e8eef3",
+  "theme_color": "#e8eef3",
+  "icons": [
+    { "src": "../img/icono-ginkgo-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "../img/icono-ginkgo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

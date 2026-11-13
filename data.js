@@ -447,6 +447,52 @@ const ALOJAMIENTOS = {
     ],
   },
 
+  ginkgo: {
+    id: "ginkgo",
+    nombre: "Ginkgo",
+    tipo: "Departamento en El Bolsón",
+    logo: "../img/logo-ginkgo.svg",   // provisorio, hasta tener el logo original
+    localidad: "El Bolsón",
+    mapsUrl: "",      // PENDIENTE: enlace de Google Maps
+    indicaciones: [],
+    instagram: "ginkgo_patagonia_departamento",
+    booking: "",      // PENDIENTE
+    contacto: { nombre: "Victoria" },   // PROVISORIO: falta el teléfono
+    wifi: { red: "", clave: "" },       // PENDIENTE
+    reglamento: [
+      "No se fuma adentro.",
+      "Por respeto a los vecinos, les pedimos bajar el volumen después de las 22 h.",
+      "No se aceptan mascotas.",
+    ],
+    comodidades: {
+      intro: [
+        "Con vista al cerro y al pueblo.",
+        "Un dormitorio; cocina, comedor y living integrados, y un baño.",
+        "Para 2 personas.",
+      ],
+      grupos: [
+        { titulo: "Cocina", items: ["Pava eléctrica", "Microondas"] },
+        { titulo: "Calefacción", items: ["Piso radiante: muy buena calefacción."] },
+        { titulo: "Ropa blanca", items: ["Sábanas y toallas", "Acolchados abrigados en invierno y de verano", "Si necesitan más, nos piden."] },
+        { titulo: "TV", items: [] },
+        { titulo: "Lavarropas", items: ["No hay lavarropas."] },
+      ],
+    },
+    servicios: [
+      { titulo: "Estaciones de servicio", items: [
+        "En El Bolsón hay cuatro:",
+        { texto: "ACA, Av. San Martín.", maps: maps("YPF Full ACA El Bolsón, Av. San Martín, El Bolsón") },
+        { texto: "Puma, Av. Belgrano y Perito Moreno.", maps: maps("Puma Energy, Av. Belgrano y Perito Moreno, El Bolsón") },
+        { texto: "A la salida hacia Bariloche.", maps: maps("YPF, Ruta 258 y Rodríguez Peña, El Bolsón") },
+        { texto: "En Balcarce y San Martín.", maps: maps("Estación de servicio, Balcarce y San Martín, El Bolsón") },
+      ] },
+      { titulo: "Cajeros", items: [
+        { texto: "Banco Patagonia – San Martín 2831", maps: maps("Banco Patagonia, San Martín 2831, El Bolsón") },
+        { texto: "Banco Nación – San Martín 2598", maps: maps("Banco Nación, San Martín 2598, El Bolsón") },
+      ] },
+    ],
+  },
+
   kalimera: {
     id: "kalimera",
     nombre: "Kalimera",
