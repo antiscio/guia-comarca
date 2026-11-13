@@ -20,6 +20,18 @@ const ENLACES = {
   splif: "https://splif.rionegro.gov.ar/el-bolson",                          // SPLIF El Bolsón: nivel de peligrosidad, se actualiza a diario
   golondrinaHorarios: "https://www.turismoelbolson.gob.ar/conectividad-comarcal", // Conectividad comarcal (turismo El Bolsón)
   turismoInvierno: "https://www.turismoelbolson.gob.ar/actividades-invernales",
+  anpraleRegistro: "https://anprale.com/recomendaciones-registro/",          // ANPRALE: registro obligatorio y aviso de descenso
+};
+
+// Información importante: registro para subir al ANPRALE (según anprale.com)
+const ANPRALE = {
+  titulo: "Si suben al ANPRALE (Cajón del Azul y refugios)",
+  items: [
+    "Antes de subir hay que registrarse: es obligatorio y personal, uno por persona. Se hace por la web o en Informes de Montaña.",
+    "Cada uno necesita su propio correo electrónico: ahí llega el comprobante con el número de registro, que pueden pedir los guardas.",
+    "El día que bajan, hay que hacer el aviso de descenso en la misma web, con el número de registro.",
+    "Antes de salir, revisen el estado de los senderos: algunos sectores siguen cerrados por el incendio de 2025.",
+  ],
 };
 
 const CHECKIN = {
@@ -221,7 +233,7 @@ const PASEOS = [
       "Desde ahí, el Cajón del Azul y los refugios del ANPRALE (~13 interconectados).",
       "Registro obligatorio antes de subir: en anprale.com o en Informes de Montaña.",
     ],
-    enlaces: [{ etiqueta: "anprale.com", url: "https://anprale.com" }],
+    enlaces: [{ etiqueta: "Registro ANPRALE", url: ENLACES.anpraleRegistro }],
     maps: maps("Chacra Wharton, Mallín Ahogado, El Bolsón"),
   },
   {

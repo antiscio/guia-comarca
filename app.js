@@ -131,6 +131,7 @@
           </div>`)).join("");
         return `<h2 class="sub">Teléfonos de emergencia · ${esc(A.localidad)}</h2>
           <section class="card"><ul class="list emergs">${emerg}</ul><p class="nota">${esc(EMERGENCIAS_NOTA)}</p></section>
+          ${card(ANPRALE.titulo, lista(ANPRALE.items), `<a class="btn-primario" href="${esc(ENLACES.anpraleRegistro)}" target="_blank" rel="noopener">Registrarse en anprale.com</a>`)}
           <h2 class="sub">Servicios cerca</h2>${serv}
           <h2 class="sub">Información turística</h2>${tur}`;
       },
