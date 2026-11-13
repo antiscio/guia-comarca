@@ -24,16 +24,16 @@
   --bg: #e8eef3;            /* Ginkgo: celeste grisáceo muy claro */
   --surface: #fbfaf5;       /* tarjetas marfil */
   --line: #d2dce5;
-  --acento: #1f4b74;        /* azul del logo */
+  --acento: #24557d;        /* azul del logo */
   --acento-suave: #f4ead0;  /* dorado suave de las hojas de ginkgo */
   --ink: #1f2f3e;
   --muted: #687888;
-  --sans: "Ubuntu", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --sans: "Overpass", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 [data-alojamiento="ginkgo"] .logo { border-radius: 50%; box-shadow: 0 10px 30px -16px rgba(23, 60, 94, .55); }
 [data-alojamiento="ginkgo"] .bienvenida .logo { width: 210px; }
 [data-alojamiento="ginkgo"] .cabecera .logo { width: 124px; }
-[data-alojamiento="ginkgo"] .boton .ico { color: #a8822c; } /* íconos en dorado */
+[data-alojamiento="ginkgo"] .boton .ico { color: #b8892a; } /* íconos en el dorado de las hojas */
 [data-alojamiento="kalimera"] .logo { border-radius: 50%; border: 1.5px solid var(--acento); box-shadow: 0 1px 0 var(--line), 0 10px 30px -18px rgba(40, 45, 46, .35); }
 [data-alojamiento="kalimera"] .boton .ico { background: transparent; border: 1px solid color-mix(in srgb, var(--acento) 35%, transparent); }
 [data-alojamiento="kalimera"] .bienvenida .logo { width: 220px; }

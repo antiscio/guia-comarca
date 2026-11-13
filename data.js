@@ -451,12 +451,12 @@ const ALOJAMIENTOS = {
     id: "ginkgo",
     nombre: "Ginkgo",
     tipo: "Departamento en El Bolsón",
-    logo: "../img/logo-ginkgo.svg",   // provisorio, hasta tener el logo original
+    logo: "../img/logo-ginkgo.png",
     localidad: "El Bolsón",
-    mapsUrl: "",      // PENDIENTE: enlace de Google Maps
-    indicaciones: [],
+    mapsUrl: maps("Av. J. M. Pueyrredón 418, El Bolsón, Río Negro"),   // dirección de Booking
+    indicaciones: ["Av. J. M. Pueyrredón 418, tercer piso."],
     instagram: "ginkgo_patagonia_departamento",
-    booking: "",      // PENDIENTE
+    booking: "https://www.booking.com/hotel/ar/ginkgo-patagonia.es.html",
     contacto: { nombre: "Victoria" },   // PROVISORIO: falta el teléfono
     wifi: { red: "", clave: "" },       // PENDIENTE
     reglamento: [
