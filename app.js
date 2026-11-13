@@ -264,7 +264,8 @@
     const instalada = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
     let visto = false;
     try { visto = sessionStorage.getItem("aviso-inicio") === "1"; } catch (e) {}
-    if (instalada || visto) return;
+    const forzar = /[?&]aviso/.test(location.search); // ?aviso: para verlo aunque ya esté instalada
+    if (!forzar && (instalada || visto)) return;
     const ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
     const pasos = ios
       ? ["Si se abrió dentro de WhatsApp, tocá el ícono de compartir y elegí <strong>Abrir en Safari</strong>.",
