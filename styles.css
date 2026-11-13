@@ -11,11 +11,11 @@
   --radio: 14px;
 }
 [data-alojamiento="kalimera"] {
-  --bg: #f5efe3;            /* Kalimera: crema y gris pizarra del logo */
-  --surface: #fffcf6;
-  --line: #e6dccb;
-  --acento: #434c4e;
-  --acento-suave: #e9e6de;
+  --bg: #e2eaee;            /* Kalimera: celeste neutro de fondo, para que resalte el logo beige */
+  --surface: #fbfcfc;
+  --line: #d2dde2;
+  --acento: #434c4e;        /* gris pizarra del logo */
+  --acento-suave: #e6edf0;
 }
 [data-alojamiento="kalimera"] .logo { border-radius: 50%; box-shadow: 0 1px 0 var(--line), 0 10px 30px -18px rgba(40, 45, 46, .35); }
 [data-alojamiento="kalimera"] .bienvenida .logo { width: 220px; }
