@@ -242,7 +242,7 @@ const AGENDA = { nombre: "Casa del Bicentenario de El Bolsón", texto: "Agenda c
 const ALOJAMIENTOS = {
   casis: {
     id: "casis",
-    nombre: "Casis",
+    nombre: "Cassis",
     tipo: "Departamento en El Bolsón",
     logo: "../img/logo-casis.svg",   // provisorio
     localidad: "El Bolsón",

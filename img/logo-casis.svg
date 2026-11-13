@@ -10,5 +10,5 @@
     <circle cx="129" cy="62" r="8" opacity=".85"/>
     <circle cx="120" cy="76" r="8" opacity=".7"/>
   </g>
-  <text x="120" y="126" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="40" font-weight="600" letter-spacing="3" fill="#2b2724">Casis</text>
+  <text x="120" y="126" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="40" font-weight="600" letter-spacing="3" fill="#2b2724">Cassis</text>
 </svg>
