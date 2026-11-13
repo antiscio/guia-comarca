@@ -474,7 +474,7 @@ const ALOJAMIENTOS = {
         { texto: "El Bolsón: Puma, Av. Belgrano y Perito Moreno.", maps: maps("Puma Energy, Av. Belgrano y Perito Moreno, El Bolsón") },
         { texto: "El Bolsón: a la salida hacia Bariloche.", maps: maps("YPF, Ruta 258 y Rodríguez Peña, El Bolsón") },
         { texto: "El Bolsón: Balcarce y San Martín.", maps: maps("Estación de servicio, Balcarce y San Martín, El Bolsón") },
-        "También hay estaciones de servicio en El Hoyo y en Epuyén.",
+        "También hay estaciones de servicio en El Hoyo, Epuyén y Cholila.",
       ] },
       { titulo: "Cajero", items: [
         { texto: "Banco del Chubut – Av. 2 de Abril", maps: maps("Banco del Chubut, Av. 2 de Abril, Lago Puelo") },

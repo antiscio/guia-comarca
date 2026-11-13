@@ -1,6 +1,6 @@
 // Guarda la app en el celular para que funcione sin señal.
 // Al cambiar cualquier contenido, subir el número de versión para que los huéspedes reciban lo nuevo.
-const VERSION = "guia-v36";
+const VERSION = "guia-v37";
 const ARCHIVOS = [
   "./styles.css", "./data.js", "./app.js",
   "./casis/", "./casis/index.html", "./casis/manifest.webmanifest",
