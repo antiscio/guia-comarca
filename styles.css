@@ -1,11 +1,11 @@
 :root {
   --bg: #f4f1ec;
-  --surface: #fffdfa;
+  --surface: #efe5ea;       /* Cassis: tarjetas en el rosado suave del casis */
   --ink: #2b2724;
   --muted: #7b726b;
   --line: #e3dcd2;
   --acento: #5a2846;        /* Cassis: tono de rama de casis (provisorio) */
-  --acento-suave: #efe5ea;
+  --acento-suave: #fffdfa;  /* círculos de los íconos en crema */
   --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --radio: 14px;
