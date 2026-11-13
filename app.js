@@ -193,10 +193,11 @@
     },
     {
       id: "resena", titulo: "Reseña", icono: "star",
-      render: () => card("", `<p class="cita">${esc(RESENA)}</p>`,
-        A.booking
+      render: () => card("", `<p class="cita">${esc(A.airbnb ? RESENA.replace("en Booking", "en Booking o en Airbnb") : RESENA)}</p>`,
+        (A.booking
           ? `<a class="btn-primario" href="${esc(A.booking)}" target="_blank" rel="noopener">${ICON.star} Dejar reseña en Booking</a>`
-          : `<p class="pendiente">Enlace de Booking pendiente.</p>`),
+          : `<p class="pendiente">Enlace de Booking pendiente.</p>`) +
+        (A.airbnb ? `<a class="btn-primario" href="${esc(A.airbnb)}" target="_blank" rel="noopener">${ICON.star} Dejar reseña en Airbnb</a>` : "")),
     },
     {
       id: "conoce", titulo: "Conocé la Comarca Andina del Paralelo 42", icono: "leaf",

@@ -457,6 +457,7 @@ const ALOJAMIENTOS = {
     indicaciones: ["Av. J. M. Pueyrredón 418, tercer piso."],
     instagram: "ginkgo_patagonia_departamento",
     booking: "https://www.booking.com/hotel/ar/ginkgo-patagonia.es.html",
+    airbnb: "https://www.airbnb.com.ar/rooms/937079193870992415",
     contacto: { nombre: "Victoria" },   // PROVISORIO: falta el teléfono
     wifi: { red: "", clave: "" },       // PENDIENTE
     reglamento: [
