@@ -61,8 +61,7 @@
       render: () =>
         card(FRANCISCO.nombre, `<p class="grande">${esc(FRANCISCO.telefono)}</p><p>Siempre atento.</p>
           <div class="acciones">
-            <a class="btn-primario" href="${telHref(FRANCISCO.tel)}">${ICON.phone} Llamar</a>
-            <a class="btn-secundario" href="${waHref(FRANCISCO.tel)}" target="_blank" rel="noopener">${ICON.wa} WhatsApp</a>
+            <a class="btn-primario" href="${waHref(FRANCISCO.tel)}" target="_blank" rel="noopener">${ICON.wa} Escribir por WhatsApp</a>
           </div>`) +
         card("Seguinos en Instagram",
           A.instagram
