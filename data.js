@@ -459,7 +459,7 @@ const ALOJAMIENTOS = {
     tipo: "Departamento en El Bolsón",
     logo: "../img/logo-ginkgo.png",
     localidad: "El Bolsón",
-    mapsUrl: maps("-41.955346,-71.532982"),  // coordenadas del departamento (Booking): la dirección sola Google no la encuentra   // dirección de Booking
+    mapsUrl: maps("-41.955346,-71.532982"),  // coordenadas del departamento (Booking): la dirección sola Google no la encuentra
     indicaciones: ["Av. J. M. Pueyrredón 418, tercer piso."],
     instagram: "ginkgo_patagonia_departamento",
     booking: "https://www.booking.com/hotel/ar/ginkgo-patagonia.es.html",
