@@ -292,7 +292,7 @@ const ALOJAMIENTOS = {
     mapsUrl: "",   // PENDIENTE: enlace de Google Maps a la casa
     fotoFachada: "",
     instagram: "kalimera.casadehuespedes",
-    booking: "",   // PENDIENTE
+    booking: "https://www.booking.com/hotel/ar/kalimera-casa-de-huespedes.es.html",
     wifi: { red: "Agathos", clave: "Telperion" },
     reglamento: [
       "No se fuma adentro. En el parque se puede fumar, sin tirar colillas.",
