@@ -7,8 +7,8 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#24557d",
-  "theme_color": "#24557d",
+  "background_color": "#fbf7ec",
+  "theme_color": "#fbf7ec",
   "icons": [
     { "src": "../img/icono-ginkgo-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
     { "src": "../img/icono-ginkgo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
