@@ -191,7 +191,7 @@
           : `<p class="pendiente">Enlace de Booking pendiente.</p>`),
     },
     {
-      id: "conoce", titulo: "Conocé El Bolsón", icono: "leaf",
+      id: "conoce", titulo: "Conocé la Comarca Andina del Paralelo 42", icono: "leaf",
       render: () => CONOCE.map((b) => card(b.titulo, foto(b.foto) + b.texto.map(p).join(""))).join(""),
     },
   ];

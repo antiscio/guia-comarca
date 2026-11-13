@@ -322,12 +322,19 @@ const FIESTAS_NOTA = "Las fechas cambian año a año: confirmen en turismo.";
 
 const AGENDA = { nombre: "Casa del Bicentenario de El Bolsón", texto: "Agenda cultural.", maps: maps("Casa del Bicentenario, El Bolsón") };
 
-// Sección "Conocé El Bolsón" (pedida después del contenido original; información de turismo y prensa regional)
+// Sección "Conocé la Comarca Andina del Paralelo 42" (pedida después del contenido original; información de turismo y prensa regional)
 const CONOCE = [
   {
-    titulo: "El valle", foto: ["flores-centro", "flores-pico"],
+    titulo: "La Comarca Andina del Paralelo 42",
     texto: [
-      "El Bolsón está en un valle al pie del cerro Piltriquitrón, rodeado de montañas, ríos y bosques. Es la ciudad principal de la Comarca Andina del Paralelo 42: el paralelo separa Río Negro de Chubut, donde están Lago Puelo, El Hoyo y Epuyén.",
+      "Es una microrregión de la Patagonia andina situada a ambos lados del paralelo 42 sur, que marca el límite natural entre las provincias de Río Negro y Chubut.",
+      "Sus localidades principales son El Bolsón, El Manso, Mallín Ahogado, Los Repollos y El Foyel, en Río Negro, y Lago Puelo, El Hoyo, Epuyén, El Maitén y Cholila, en Chubut. El Bolsón es el corazón de la microrregión.",
+    ],
+  },
+  {
+    titulo: "El Bolsón", foto: ["flores-centro", "flores-pico"],
+    texto: [
+      "El Bolsón está en un valle al pie del cerro Piltriquitrón, rodeado de montañas, ríos y bosques.",
       "En 1984 se declaró Zona No Nuclear, y desde entonces es conocido por su perfil ecológico, sus ferias y sus artesanos. En 2026 cumplió cien años.",
     ],
   },
