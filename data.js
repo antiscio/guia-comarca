@@ -128,6 +128,12 @@ const COMER = {
 
 // Fotos: las propias no llevan crédito; las de Wikimedia Commons, autor y licencia (obligatorio)
 const FOTOS = {
+  "piltri-nieve": {
+    "src": "../img/fotos/piltri-nieve.jpg",
+    "autor": "Bere Delgado",
+    "licencia": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Piltriquitron.jpeg"
+  },
   "bosque-tallado": {
     "src": "../img/fotos/bosque-tallado.jpg",
     "autor": "Jaqura1",
@@ -392,7 +398,7 @@ const CONOCE = [
     ],
   },
   {
-    titulo: "Nieve",
+    titulo: "Nieve", foto: "piltri-nieve",
     texto: [
       "En invierno, el cerro Perito Moreno, a unos 25 km, es el centro de esquí de la Comarca. Más información en Actividades → Invierno.",
     ],
@@ -426,7 +432,7 @@ const ALOJAMIENTOS = {
       grupos: [
         { titulo: "Cocina", items: ["Heladera con freezer", "Pava eléctrica", "Cafetera", "Licuadora"] },
         { titulo: "Lavarropas", items: [] },
-        { titulo: "Ropa blanca", items: ["Sábanas y toallas", "Acolchados abrigados en invierno y de verano", "Si necesitan más, nos piden."] },
+        { titulo: "Ropa blanca", items: ["Sábanas y toallas", "Acolchados abrigados en invierno y de verano"] },
         { titulo: "Baños", items: ["Secador de pelo", "Artículos de higiene"] },
         { titulo: "TV", items: ["TV en el dormitorio principal y TV grande en el living, con Roku: cada uno entra con su propia cuenta."] },
         { titulo: "Limpieza", items: ["Productos de limpieza disponibles."] },
@@ -453,7 +459,7 @@ const ALOJAMIENTOS = {
     tipo: "Departamento en El Bolsón",
     logo: "../img/logo-ginkgo.png",
     localidad: "El Bolsón",
-    mapsUrl: maps("Av. J. M. Pueyrredón 418, El Bolsón, Río Negro"),   // dirección de Booking
+    mapsUrl: maps("-41.955346,-71.532982"),  // coordenadas del departamento (Booking): la dirección sola Google no la encuentra   // dirección de Booking
     indicaciones: ["Av. J. M. Pueyrredón 418, tercer piso."],
     instagram: "ginkgo_patagonia_departamento",
     booking: "https://www.booking.com/hotel/ar/ginkgo-patagonia.es.html",
@@ -472,11 +478,10 @@ const ALOJAMIENTOS = {
         "Para 2 personas.",
       ],
       grupos: [
-        { titulo: "Cocina", items: ["Pava eléctrica", "Microondas"] },
+        { titulo: "Cocina", items: ["Muy completa y muy bien equipada.", "Heladera con freezer", "Cocina con horno", "Pava eléctrica", "Microondas"] },
         { titulo: "Calefacción", items: ["Piso radiante: muy buena calefacción."] },
-        { titulo: "Ropa blanca", items: ["Sábanas y toallas", "Acolchados abrigados en invierno y de verano", "Si necesitan más, nos piden."] },
-        { titulo: "TV", items: [] },
-        { titulo: "Lavarropas", items: ["No hay lavarropas."] },
+        { titulo: "Ropa blanca", items: ["Sábanas y toallas", "Acolchados abrigados en invierno y de verano"] },
+        { titulo: "TV", items: ["TV Smart en el living y TV en el dormitorio."] },
       ],
     },
     servicios: [
@@ -521,7 +526,7 @@ const ALOJAMIENTOS = {
       grupos: [
         { titulo: "Camas", items: ["Dormitorio 1: cama doble", "Dormitorio 2: dos camas", "Living: sofá cama para dos"] },
         { titulo: "Cocina", items: ["Heladera con freezer", "Microondas", "Pava eléctrica"] },
-        { titulo: "Ropa blanca", items: ["Sábanas y toallas", "Acolchados abrigados en invierno y de verano", "Si necesitan más, nos piden."] },
+        { titulo: "Ropa blanca", items: ["Sábanas y toallas", "Acolchados abrigados en invierno y de verano"] },
         { titulo: "Baño", items: ["Secador de pelo", "Artículos de higiene"] },
         { titulo: "TV smart", items: ["Cada uno entra con su propia cuenta."] },
         { titulo: "Exterior", items: ["Mesa de jardín", "Estacionamiento dentro del parque cerrado"] },

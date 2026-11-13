@@ -160,9 +160,10 @@
         },
         {
           id: "aventura", titulo: "Actividades",
-          render: () => ACTIVIDADES.map((x) => card(x.nombre,
-            foto(x.foto) + p(x.texto) + (x.lugares ? `<ul class="list">${x.lugares.map((l) => `<li>${esc(l.nombre)} ${mapsBtn(l.maps)}</li>`).join("")}</ul>` : ""),
-            x.informes ? informes() : "")).join("") +
+          // la foto arriba de todo, de borde a borde, como en Paseos
+          render: () => ACTIVIDADES.map((x) => `<section class="card">${foto(x.foto)}<h3>${esc(x.nombre)}</h3>` + (
+            p(x.texto) + (x.lugares ? `<ul class="list">${x.lugares.map((l) => `<li>${esc(l.nombre)} ${mapsBtn(l.maps)}</li>`).join("")}</ul>` : "") +
+            (x.informes ? informes() : "")) + `</section>`).join("") +
             card("Agenda cultural", `<p>${esc(AGENDA.nombre)}</p>`, mapsBtn(AGENDA.maps)),
         },
         {
