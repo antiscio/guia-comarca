@@ -468,8 +468,12 @@ const ALOJAMIENTOS = {
     },
     servicios: [
       { titulo: "Colectivo", items: ["La Golondrina (línea El Bolsón – Lago Puelo) pasa frente a la casa; sirve también para ir al lago."], enlace: "golondrinaHorarios", etiqueta: "Horarios y líneas (turismo El Bolsón)" },
-      { titulo: "Estación de servicio", items: [
-        { texto: "YPF de Av. Los Notros y Ruta 16, la única de Lago Puelo.", maps: maps("YPF, Av. Los Notros y Ruta 16, Lago Puelo") },
+      { titulo: "Estaciones de servicio", items: [
+        { texto: "Lago Puelo: YPF de Av. Los Notros y Ruta 16, la única del pueblo.", maps: maps("YPF, Av. Los Notros y Ruta 16, Lago Puelo") },
+        { texto: "El Bolsón: ACA, Av. San Martín.", maps: maps("YPF Full ACA El Bolsón, Av. San Martín, El Bolsón") },
+        { texto: "El Bolsón: Puma, Av. Belgrano y Perito Moreno.", maps: maps("Puma Energy, Av. Belgrano y Perito Moreno, El Bolsón") },
+        { texto: "El Bolsón: a la salida hacia Bariloche.", maps: maps("YPF, Ruta 258 y Rodríguez Peña, El Bolsón") },
+        { texto: "El Bolsón: Balcarce y San Martín.", maps: maps("Estación de servicio, Balcarce y San Martín, El Bolsón") },
         "También hay estaciones de servicio en El Hoyo y en Epuyén.",
       ] },
       { titulo: "Cajero", items: [
