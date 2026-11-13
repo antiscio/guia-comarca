@@ -12,7 +12,7 @@
 }
 [data-alojamiento="kalimera"] {
   --bg: #e2eaee;            /* Kalimera: celeste neutro de fondo, para que resalte el logo beige */
-  --surface: #fbfcfc;
+  --surface: #f5efe3;       /* tarjetas en el crema del logo */
   --line: #d2dde2;
   --acento: #434c4e;        /* gris pizarra del logo */
   --acento-suave: #e6edf0;
