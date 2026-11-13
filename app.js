@@ -13,6 +13,12 @@
   const enlace = (key, label) => ext(ENLACES[key], label);
   const lista = (items) => `<ul class="list">${items.map((i) => `<li>${typeof i === "string" ? esc(i) : esc(i.texto) + " " + mapsBtn(i.maps)}</li>`).join("")}</ul>`;
   const card = (titulo, cuerpo, extra = "") => `<section class="card">${titulo ? `<h3>${esc(titulo)}</h3>` : ""}${cuerpo}${extra}</section>`;
+  // Actividades sin lugar fijo: se piden informes en la oficina de turismo de El Bolsón
+  const informes = () => {
+    const t = INFO_TURISTICA[0];
+    return `<p class="nota">Informes en el ${esc(t.nombre)}.</p>
+      <div class="acciones"><a class="chip" href="${telHref(t.tel)}">${ICON.phone} ${esc(t.tel)}</a>${mapsBtn(t.maps)}</div>`;
+  };
   const p = (t) => (t ? `<p>${esc(t)}</p>` : "");
   const foto = (slug) => {
     // Varias fotos: van completas, sin recortar, una al lado de la otra
@@ -145,12 +151,14 @@
           id: "aventura", titulo: "Actividades",
           render: () => ACTIVIDADES.map((x) => card(x.nombre,
             foto(x.foto) + p(x.texto) + (x.lugares ? `<ul class="list">${x.lugares.map((l) => `<li>${esc(l.nombre)} ${mapsBtn(l.maps)}</li>`).join("")}</ul>` : ""),
-            x.tel ? `<a class="chip" href="${telHref(x.tel)}">${ICON.phone} ${esc(x.etiqueta)} · ${esc(x.tel)}</a>` : "")).join("") +
+            x.informes ? informes() : "")).join("") +
             card("Agenda cultural", `<p>${esc(AGENDA.nombre)}</p>`, mapsBtn(AGENDA.maps)),
         },
         {
           id: "invierno", titulo: "Invierno",
-          render: () => INVIERNO.map((x) => card(x.nombre, p(x.texto), mapsBtn(x.maps))).join("") +
+          render: () => INVIERNO.map((x) => card(x.nombre,
+            p(x.texto) + (x.lugares ? `<ul class="list">${x.lugares.map((l) => `<li>${esc(l.nombre)} ${mapsBtn(l.maps)}</li>`).join("")}</ul>` : ""),
+            mapsBtn(x.maps))).join("") +
             `<p class="nota">${esc(INVIERNO_NOTA)}</p>` + enlace("turismoInvierno", "Actividades de invierno (turismo El Bolsón)"),
         },
         {

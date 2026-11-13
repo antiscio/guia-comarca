@@ -284,12 +284,12 @@ const PASEOS = [
 ];
 
 const ACTIVIDADES = [
-  { nombre: "Rafting", foto: "rio-azul", texto: "En el río Azul." },
-  { nombre: "Parapente", foto: "parapente", texto: "En la plataforma del Piltriquitrón." },
-  { nombre: "Cabalgatas", texto: "" },
-  { nombre: "Kayak y SUP", foto: "kayak", texto: "Kayak en los lagos y SUP en el lago Epuyén." },
-  { nombre: "Trekking con guía", texto: "Con guías habilitados de turismo. La lista se consulta en la oficina de informes.", tel: "+54 294 4498008", etiqueta: "Informes" },
-  { nombre: "Alquiler de bicicletas", texto: "" },
+  { nombre: "Rafting", foto: "rio-azul", texto: "En el río Azul.", informes: true },
+  { nombre: "Parapente", foto: "parapente", texto: "En la plataforma del Piltriquitrón.", informes: true },
+  { nombre: "Cabalgatas", texto: "", informes: true },
+  { nombre: "Kayak y SUP", foto: "kayak", texto: "Kayak en los lagos y SUP en el lago Epuyén.", informes: true },
+  { nombre: "Trekking con guía", texto: "Con guías habilitados de turismo. La lista se consulta en la oficina de informes.", informes: true },
+  { nombre: "Alquiler de bicicletas", texto: "", informes: true },
   {
     nombre: "Tirolesa", texto: "",
     lugares: [
@@ -300,9 +300,12 @@ const ACTIVIDADES = [
 ];
 
 const INVIERNO = [
-  { nombre: "Cerro Perito Moreno", texto: "Esquí, trineo, raquetas, aerosilla y el Refugio Albrecht Rudolph.", maps: maps("Cerro Perito Moreno, El Bolsón") },
+  {
+    nombre: "Cerro Perito Moreno", texto: "Esquí, trineo, raquetas, aerosilla y el Refugio Albrecht Rudolph.", maps: maps("Cerro Perito Moreno, El Bolsón"),
+    lugares: [{ nombre: "Refugio Albrecht Rudolph", maps: maps("Refugio Albrecht Rudolph, Mallín Ahogado, Río Negro") }],
+  },
   { nombre: "Transfer de invierno", texto: "La Golondrina, desde Plaza Pagano.", maps: maps("Plaza Pagano, El Bolsón") },
-  { nombre: "Piltriquitrón", texto: "El refugio y el Bosque Tallado siguen abiertos aun con nieve: consulten el estado de los caminos antes de subir." },
+  { nombre: "Piltriquitrón", texto: "El refugio y el Bosque Tallado siguen abiertos aun con nieve: consulten el estado de los caminos antes de subir.", maps: maps("Bosque Tallado, Cerro Piltriquitrón, El Bolsón") },
 ];
 const INVIERNO_NOTA = "En invierno, consulten con turismo si cada lugar está abierto.";
 
@@ -399,8 +402,11 @@ const ALOJAMIENTOS = {
     },
     servicios: [
       { titulo: "Estaciones de servicio", items: [
-        "ACA, a 100 m, y enfrente una Puma.",
-        "En El Bolsón hay cuatro: ACA y Puma cerca del depto, una a la salida hacia Bariloche y otra en Balcarce y San Martín.",
+        "En El Bolsón hay cuatro:",
+        { texto: "ACA, a 100 m.", maps: maps("YPF Full ACA El Bolsón, Av. San Martín, El Bolsón") },
+        { texto: "Puma, enfrente de la ACA.", maps: maps("Puma Energy, Av. Belgrano y Perito Moreno, El Bolsón") },
+        { texto: "A la salida hacia Bariloche.", maps: maps("YPF, Ruta 258 y Rodríguez Peña, El Bolsón") },
+        { texto: "En Balcarce y San Martín.", maps: maps("Estación de servicio, Balcarce y San Martín, El Bolsón") },
       ] },
       { titulo: "Cajeros", items: [
         { texto: "Banco Patagonia – San Martín 2831", maps: maps("Banco Patagonia, San Martín 2831, El Bolsón") },
