@@ -53,6 +53,11 @@
   // ---------- secciones (los once botones) ----------
   const SECCIONES = [
     {
+      id: "recomendaciones", titulo: "Recomendaciones", icono: "bulb", ancho: true,
+      render: () => `<section class="card"><ol class="list numerada">${RECOMENDACIONES.map((r) =>
+        `<li>${esc(r.texto)}${r.enlace ? "<br>" + enlace(r.enlace, r.etiqueta) : ""}</li>`).join("")}</ol></section>`,
+    },
+    {
       id: "ubicacion", titulo: "Ubicación y cómo llegar", icono: "pin",
       // El botón del menú abre Google Maps directo; las indicaciones van en el mismo botón
       externo: () => A.mapsUrl,
@@ -168,11 +173,6 @@
       ],
     },
     {
-      id: "recomendaciones", titulo: "Recomendaciones", icono: "bulb",
-      render: () => `<section class="card"><ol class="list numerada">${RECOMENDACIONES.map((r) =>
-        `<li>${esc(r.texto)}${r.enlace ? "<br>" + enlace(r.enlace, r.etiqueta) : ""}</li>`).join("")}</ol></section>`,
-    },
-    {
       id: "comer", titulo: "Dónde comer", icono: "food",
       tabs: [A.localidad, otraLocalidad].map((loc) => ({
         id: loc === "El Bolsón" ? "bolson" : "puelo", titulo: loc,
@@ -214,7 +214,7 @@
         const url = s.externo && s.externo();
         const nota = s.nota && s.nota();
         if (!s.render && !s.tabs && !url) return `<div class="boton"><span class="ico">${ICON[s.icono]}</span><span>${s.etiqueta()}</span></div>`;
-        return `<a class="boton" href="${url ? esc(url) : "#" + s.id}"${url ? ' target="_blank" rel="noopener"' : ""}><span class="ico">${ICON[s.icono]}</span>
+        return `<a class="boton${s.ancho ? " ancho" : ""}" href="${url ? esc(url) : "#" + s.id}"${url ? ' target="_blank" rel="noopener"' : ""}><span class="ico">${ICON[s.icono]}</span>
           <span>${s.etiqueta ? s.etiqueta() : esc(s.titulo)}${nota ? `<small class="boton-nota">${esc(nota)}</small>` : ""}</span></a>`;
       }).join("")}</main>
       ${A.instagram ? `<footer class="pie"><a href="https://instagram.com/${esc(A.instagram)}" target="_blank" rel="noopener">${ICON.ig} Seguinos en Instagram</a></footer>` : ""}`;
