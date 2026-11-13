@@ -28,6 +28,7 @@
     mountain: `<svg viewBox="0 0 24 24"><path d="m2 20 7-12 4 6 3-4 6 10z"/><path d="m7.5 11 1.5 1.5L11 11"/></svg>`,
     bulb: `<svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>`,
     food: `<svg viewBox="0 0 24 24"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10M17 21V3c-2.5 1-4 3.5-4 7v3h4"/></svg>`,
+    leaf: `<svg viewBox="0 0 24 24"><path d="M12 3c3 2.5 4.5 5.5 4.5 9S15 18.5 12 21c-3-2.5-4.5-5.5-4.5-9S9 5.5 12 3z"/><path d="M12 7v14M12 11l2.5-2M12 15l-2.5-2"/></svg>`,
     star: `<svg viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>`,
     copy: `<svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>`,
     ig: `<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg>`,
@@ -175,6 +176,10 @@
         A.booking
           ? `<a class="btn-primario" href="${esc(A.booking)}" target="_blank" rel="noopener">${ICON.star} Dejar reseña en Booking</a>`
           : `<p class="pendiente">Enlace de Booking pendiente.</p>`),
+    },
+    {
+      id: "conoce", titulo: "Conocé El Bolsón", icono: "leaf",
+      render: () => CONOCE.map((b) => card(b.titulo, b.texto.map(p).join(""))).join(""),
     },
   ];
 

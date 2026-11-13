@@ -239,6 +239,51 @@ const FIESTAS_NOTA = "Las fechas cambian año a año: confirmen en turismo.";
 
 const AGENDA = { nombre: "Casa del Bicentenario de El Bolsón", texto: "Agenda cultural.", maps: maps("Casa del Bicentenario, El Bolsón") };
 
+// Sección "Conocé El Bolsón" (pedida después del contenido original; información de turismo y prensa regional)
+const CONOCE = [
+  {
+    titulo: "El valle",
+    texto: [
+      "El Bolsón está en un valle al pie del cerro Piltriquitrón, rodeado de montañas, ríos y bosques. Es la ciudad principal de la Comarca Andina del Paralelo 42: el paralelo separa Río Negro de Chubut, donde están Lago Puelo, El Hoyo y Epuyén.",
+      "En 1984 se declaró Zona No Nuclear, y desde entonces es conocido por su perfil ecológico, sus ferias y sus artesanos. En 2026 cumplió cien años.",
+    ],
+  },
+  {
+    titulo: "El clima",
+    texto: [
+      "Tiene un microclima más templado que el de otros lugares de la cordillera. Los veranos son secos, con días calurosos y noches frescas; los inviernos, fríos y lluviosos, con nieve en los cerros.",
+      "En otoño los bosques cambian de color. En cualquier época conviene tener algo de abrigo a mano.",
+    ],
+  },
+  {
+    titulo: "Lúpulo y cerveza artesanal",
+    texto: [
+      "El Bolsón es la zona lupulera más importante del país: acá se produce más de la mitad del lúpulo argentino.",
+      "También es cuna de la cerveza artesanal en la Argentina, con decenas de productores en la Comarca. En verano se celebra la Fiesta del Lúpulo.",
+    ],
+  },
+  {
+    titulo: "Frutas finas",
+    texto: [
+      "Frambuesas, frutillas, cerezas, guindas, grosellas, zarzamoras, saúco y casis crecen muy bien en el valle, y son una de las principales producciones de la zona.",
+      "Se encuentran frescas en verano y todo el año en dulces, helados y licores. En El Hoyo se hace la Fiesta de la Fruta Fina.",
+    ],
+  },
+  {
+    titulo: "Chacras, quesos y trufas",
+    texto: [
+      "Muchas chacras elaboran quesos caseros, lácteos, ahumados y dulces, y algunas se pueden visitar para conocer cómo trabajan y comprar directo.",
+      "En los últimos años se sumaron las trufas, el azafrán y los vinos de la zona; en otoño se hace el Festival de la Trufa en Mallín Ahogado.",
+    ],
+  },
+  {
+    titulo: "Nieve",
+    texto: [
+      "En invierno, el cerro Perito Moreno, a unos 25 km, es el centro de esquí de la Comarca. Más información en Actividades → Invierno.",
+    ],
+  },
+];
+
 const ALOJAMIENTOS = {
   casis: {
     id: "casis",
