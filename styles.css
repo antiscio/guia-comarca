@@ -16,6 +16,9 @@
   --line: #d2dde2;
   --acento: #434c4e;        /* gris pizarra del logo */
   --acento-suave: #e6edf0;
+  --ink: #5a4a3f;           /* letras en marrón, como "Casa en Lago Puelo" */
+  --muted: #8a7a6e;
+  --sans: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 [data-alojamiento="kalimera"] .logo { border-radius: 50%; box-shadow: 0 1px 0 var(--line), 0 10px 30px -18px rgba(40, 45, 46, .35); }
 [data-alojamiento="kalimera"] .bienvenida .logo { width: 220px; }
