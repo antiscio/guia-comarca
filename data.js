@@ -488,8 +488,11 @@ const ALOJAMIENTOS = {
         { texto: "El Bolsón: Balcarce y San Martín.", maps: maps("Estación de servicio, Balcarce y San Martín, El Bolsón") },
         "También hay estaciones de servicio en El Hoyo, Epuyén y Cholila.",
       ] },
-      { titulo: "Cajero", items: [
-        { texto: "Banco del Chubut – Av. 2 de Abril", maps: maps("Banco del Chubut, Av. 2 de Abril, Lago Puelo") },
+      { titulo: "Cajeros", items: [
+        { texto: "Lago Puelo: Banco del Chubut – Av. 2 de Abril", maps: maps("Banco del Chubut, Av. 2 de Abril, Lago Puelo") },
+        { texto: "El Bolsón: Banco Nación – San Martín 2598", maps: maps("Banco Nación, San Martín 2598, El Bolsón") },
+        { texto: "El Bolsón: Banco Patagonia – San Martín 2831", maps: maps("Banco Patagonia, San Martín 2831, El Bolsón") },
+        { texto: "El Hoyo: Banco del Chubut – Islas Malvinas 410", maps: maps("Banco del Chubut, Islas Malvinas 410, El Hoyo, Chubut") },
       ] },
     ],
   },
