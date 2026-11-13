@@ -144,10 +144,7 @@ const FOTOS = {
     "src": "../img/fotos/desemboque.jpg"
   },
   "corbata-blanca": {
-    "src": "../img/fotos/corbata-blanca.jpg",
-    "autor": "Jmmuguerza",
-    "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:La_Catarata_Corbata_Blanca,_El_Hoyo.jpg"
+    "src": "../img/fotos/corbata-blanca.jpg"
   },
   "bodega-adamow": {
     "src": "../img/fotos/bodega-adamow.jpg"
@@ -183,6 +180,7 @@ const FOTOS = {
     "src": "../img/fotos/parva.jpg"
   }
 };
+
 
 
 
