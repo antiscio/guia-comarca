@@ -66,14 +66,8 @@
     },
     {
       id: "checkin", titulo: "Check-in / Check-out", icono: "key",
+      // Solo el horario, en el mismo botón: no abre otra pantalla
       etiqueta: () => "Check-in 15 h<br>Check-out 10 h",
-      render: () =>
-        `<div class="horarios">
-          <div><span class="etq">Check-in</span><strong>15 h</strong><small>${esc(CHECKIN.entrada)}</small></div>
-          <div><span class="etq">Check-out</span><strong>10 h</strong><small>${esc(CHECKIN.salida)}</small></div>
-        </div>` +
-        card("Llegada", p(CHECKIN.recibimiento)) +
-        card("Salida", lista(CHECKIN.salidaDetalle)),
     },
     {
       id: "contacto", titulo: "Contacto", icono: "phone",
@@ -219,6 +213,7 @@
       <main class="menu">${SECCIONES.map((s) => {
         const url = s.externo && s.externo();
         const nota = s.nota && s.nota();
+        if (!s.render && !s.tabs && !url) return `<div class="boton"><span class="ico">${ICON[s.icono]}</span><span>${s.etiqueta()}</span></div>`;
         return `<a class="boton" href="${url ? esc(url) : "#" + s.id}"${url ? ' target="_blank" rel="noopener"' : ""}><span class="ico">${ICON[s.icono]}</span>
           <span>${s.etiqueta ? s.etiqueta() : esc(s.titulo)}${nota ? `<small class="boton-nota">${esc(nota)}</small>` : ""}</span></a>`;
       }).join("")}</main>
@@ -242,7 +237,7 @@
 
   function mostrar() {
     const [ruta, sub] = location.hash.replace("#", "").split("/");
-    const s = SECCIONES.find((x) => x.id === ruta);
+    const s = SECCIONES.find((x) => x.id === ruta && (x.render || x.tabs));
     app.className = s ? "vista-seccion" : ruta === "menu" ? "vista-menu" : "vista-bienvenida";
     app.innerHTML = s ? seccion(s, sub) : ruta === "menu" ? menu() : bienvenida();
     if (s && s.despues) s.despues();
