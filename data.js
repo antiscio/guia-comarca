@@ -126,16 +126,10 @@ const FOTOS = {
     "url": "https://commons.wikimedia.org/wiki/File:Mirador_desde_Cascada_Escondida.jpg"
   },
   "lago-puelo": {
-    "src": "../img/fotos/lago-puelo.jpg",
-    "autor": "Isha",
-    "licencia": "Public domain",
-    "url": "https://commons.wikimedia.org/wiki/File:Lago_Puelo.jpg"
+    "src": "../img/fotos/lago-puelo.jpg"
   },
   "puerto-patriada": {
-    "src": "../img/fotos/puerto-patriada.jpg",
-    "autor": "Guzman Maira",
-    "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Puerto_patriada.jpg"
+    "src": "../img/fotos/puerto-patriada.jpg"
   },
   "laberinto": {
     "src": "../img/fotos/laberinto.jpg",
@@ -144,16 +138,16 @@ const FOTOS = {
     "url": "https://commons.wikimedia.org/wiki/File:Laberinto_Patagonia.jpg"
   },
   "kayak": {
-    "src": "../img/fotos/kayak.jpg",
-    "autor": "Jmmuguerza",
-    "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Kayak_Puerto_Patriada_Lago_Epuyen.jpg"
+    "src": "../img/fotos/kayak.jpg"
   },
   "desemboque": {
     "src": "../img/fotos/desemboque.jpg"
   },
   "corbata-blanca": {
-    "src": "../img/fotos/corbata-blanca.jpg"
+    "src": "../img/fotos/corbata-blanca.jpg",
+    "autor": "Jmmuguerza",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:La_Catarata_Corbata_Blanca,_El_Hoyo.jpg"
   },
   "bodega-adamow": {
     "src": "../img/fotos/bodega-adamow.jpg"
@@ -181,8 +175,16 @@ const FOTOS = {
   },
   "parapente": {
     "src": "../img/fotos/parapente.jpg"
+  },
+  "epuyen": {
+    "src": "../img/fotos/epuyen.jpg"
+  },
+  "parva": {
+    "src": "../img/fotos/parva.jpg"
   }
 };
+
+
 
 
 // Paseos compartidos. Las distancias son las del contenido (desde el centro de El Bolsón cuando así figura).
@@ -277,7 +279,7 @@ const PASEOS = [
     maps: maps("Estupa budista, Epuyén"),
   },
   {
-    nombre: "Centro Cultural Antú Quillén", lugar: "Lago Epuyén",
+    nombre: "Centro Cultural Antú Quillén", foto: "epuyen", lugar: "Lago Epuyén",
     puntos: ["En Puerto Bonito.", "Artesanías, galería, talleres, espectáculos y buffet."],
     maps: maps("Centro Cultural Antú Quillén, Puerto Bonito, Epuyén"),
   },
@@ -350,7 +352,7 @@ const CONOCE = [
     ],
   },
   {
-    titulo: "Chacras, quesos y trufas",
+    titulo: "Chacras, quesos y trufas", foto: "parva",
     texto: [
       "Muchas chacras elaboran quesos caseros, lácteos, ahumados y dulces, y algunas se pueden visitar para conocer cómo trabajan y comprar directo.",
       "En los últimos años se sumaron las trufas, el azafrán y los vinos de la zona; en otoño se hace el Festival de la Trufa en Mallín Ahogado.",
