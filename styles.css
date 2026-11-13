@@ -22,16 +22,16 @@
 }
 [data-alojamiento="ginkgo"] {
   --bg: #f0e6d2;            /* Ginkgo: fondo crema tirando a beige */
-  --surface: #24557d;       /* tarjetas en el azul del logo */
-  --line: rgba(251, 247, 236, .22);
-  --acento: #f2b941;        /* dorado luminoso de las hojas del logo */
-  --acento-suave: #f4e8c8;
+  --surface: #f2b941;       /* tarjetas en el dorado de las hojas del logo */
+  --line: rgba(36, 85, 125, .28);
+  --acento: #24557d;        /* azul del logo: íconos, círculos, botones */
+  --acento-suave: #f7dc9c;
   --azul: #24557d;
-  --ink: #fbf7ec;           /* letras de las tarjetas en marfil */
-  --muted: #c3d1de;
+  --ink: #1d3a57;           /* letras en azul */
+  --muted: #4d5e6e;
   --sans: "Overpass", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
-[data-alojamiento="ginkgo"] .logo { border-radius: 50%; box-shadow: 0 0 0 1.5px var(--acento), 0 14px 34px -16px rgba(23, 52, 79, .55); }
+[data-alojamiento="ginkgo"] .logo { border-radius: 50%; box-shadow: 0 0 0 1.5px #f2b941, 0 14px 34px -16px rgba(23, 52, 79, .55); }
 [data-alojamiento="ginkgo"] .bienvenida .logo { width: 210px; }
 [data-alojamiento="ginkgo"] .cabecera .logo { width: 124px; }
 /* lo que va directo sobre el fondo crema, en azul */
@@ -39,11 +39,10 @@
 [data-alojamiento="ginkgo"] .barra h1, [data-alojamiento="ginkgo"] .barra .ico, [data-alojamiento="ginkgo"] .pie a,
 [data-alojamiento="ginkgo"] .contenido > .nota, [data-alojamiento="ginkgo"] .contenido > .link { color: var(--azul); }
 [data-alojamiento="ginkgo"] .barra { border-bottom-color: #dccfb4; }
-/* sobre dorado o dorado suave, letra azul */
-[data-alojamiento="ginkgo"] .btn-primario, [data-alojamiento="ginkgo"] .tabs a.activa { color: #16344f; }
-[data-alojamiento="ginkgo"] .boton .ico { background: transparent; border: 1.5px solid var(--acento); color: var(--acento); } /* íconos dorados en círculo dorado */
-[data-alojamiento="ginkgo"] .num,
-[data-alojamiento="ginkgo"] .numerada li::before { color: var(--azul); }
+[data-alojamiento="ginkgo"] .volver { color: var(--azul); }
+/* íconos azules en círculo azul, sin relleno */
+[data-alojamiento="ginkgo"] .boton .ico { background: transparent; border: 1.5px solid var(--acento); color: var(--acento); }
+[data-alojamiento="ginkgo"] .btn-primario, [data-alojamiento="ginkgo"] .tabs a.activa { color: #fbf3df; }
 [data-alojamiento="kalimera"] .logo { border-radius: 50%; border: 1.5px solid var(--acento); box-shadow: 0 1px 0 var(--line), 0 10px 30px -18px rgba(40, 45, 46, .35); }
 [data-alojamiento="kalimera"] .boton .ico { background: transparent; border: 1px solid color-mix(in srgb, var(--acento) 35%, transparent); }
 [data-alojamiento="kalimera"] .bienvenida .logo { width: 220px; }
