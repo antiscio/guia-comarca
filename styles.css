@@ -174,3 +174,19 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
 .card h3 + .foto-lugar, .card h3 + .foto-lugar figcaption { margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
 .foto-par { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
 .foto-par img { display: block; width: 100%; height: auto; border-radius: 10px; }
+
+/* ---------- aviso para guardar en la pantalla de inicio ---------- */
+.aviso-fondo {
+  position: fixed; inset: 0; z-index: 10; display: flex; align-items: flex-end; justify-content: center;
+  background: rgba(30, 26, 24, .45); animation: aparecer .3s ease both;
+}
+.aviso {
+  width: 100%; max-width: 560px; background: var(--surface); border-radius: 22px 22px 0 0;
+  padding: 24px 20px calc(20px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 14px;
+  border-top: 1px solid var(--acento);
+}
+.aviso h2 { font-family: var(--serif); font-size: 26px; font-weight: 600; line-height: 1.15; color: var(--acento); }
+.aviso .numerada li::before { background: var(--bg); }
+.aviso .i-compartir { width: 18px; height: 18px; vertical-align: -3px; color: var(--acento); }
+.aviso .btn-primario, .aviso .btn-secundario { width: 100%; }
+.aviso [hidden] { display: none; }

@@ -43,6 +43,7 @@
     food: `<svg viewBox="0 0 24 24"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10M17 21V3c-2.5 1-4 3.5-4 7v3h4"/></svg>`,
     leaf: `<svg viewBox="0 0 24 24"><path d="M12 3c3 2.5 4.5 5.5 4.5 9S15 18.5 12 21c-3-2.5-4.5-5.5-4.5-9S9 5.5 12 3z"/><path d="M12 7v14M12 11l2.5-2M12 15l-2.5-2"/></svg>`,
     star: `<svg viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg>`,
+    compartir: `<svg class="i-compartir" viewBox="0 0 24 24"><path d="M12 15V3M8 7l4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></svg>`,
     copy: `<svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>`,
     ig: `<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg>`,
     wa: `<svg viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a4 4 0 0 1-2-2l1-1-1-2z"/></svg>`,
@@ -249,6 +250,53 @@
 
   window.addEventListener("hashchange", mostrar);
   mostrar();
+
+  // ---------- aviso para guardar la guía en la pantalla de inicio ----------
+  // Aparece al abrir el enlace en el navegador (una vez por visita); no aparece si ya se abre como app.
+  let pedidoInstalar = null; // Android/Chrome: permite instalar con un toque
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    pedidoInstalar = e;
+    const b = document.getElementById("instalar");
+    if (b) b.hidden = false;
+  });
+  function avisoInicio() {
+    const instalada = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+    let visto = false;
+    try { visto = sessionStorage.getItem("aviso-inicio") === "1"; } catch (e) {}
+    if (instalada || visto) return;
+    const ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    const pasos = ios
+      ? ["Si se abrió dentro de WhatsApp, tocá el ícono de compartir y elegí <strong>Abrir en Safari</strong>.",
+         `En Safari, tocá el botón <strong>Compartir</strong> ${ICON.compartir}`,
+         "Elegí <strong>Agregar a inicio</strong> y después <strong>Agregar</strong>."]
+      : ["Si se abrió dentro de WhatsApp, tocá <strong>⋮</strong> y elegí <strong>Abrir en Chrome</strong>.",
+         "En Chrome, tocá <strong>⋮</strong> arriba a la derecha.",
+         "Elegí <strong>Agregar a la pantalla principal</strong> (o <strong>Instalar aplicación</strong>)."];
+    const el = document.createElement("div");
+    el.className = "aviso-fondo";
+    el.innerHTML = `<section class="aviso" role="dialog" aria-labelledby="aviso-titulo">
+        <h2 id="aviso-titulo">Guardá la guía en tu celular</h2>
+        <p>Así la tienen siempre a mano, como una app, y funciona aunque no haya señal.</p>
+        <ol class="list numerada">${pasos.map((x) => `<li>${x}</li>`).join("")}</ol>
+        <button class="btn-primario" id="instalar"${pedidoInstalar ? "" : " hidden"}>Agregar a la pantalla de inicio</button>
+        <button class="btn-secundario" id="aviso-ok">Entendido</button>
+      </section>`;
+    document.body.appendChild(el);
+    const cerrar = () => {
+      try { sessionStorage.setItem("aviso-inicio", "1"); } catch (e) {}
+      el.remove();
+    };
+    el.querySelector("#aviso-ok").onclick = cerrar;
+    el.querySelector("#instalar").onclick = async () => {
+      if (!pedidoInstalar) return;
+      pedidoInstalar.prompt();
+      await pedidoInstalar.userChoice.catch(() => {});
+      pedidoInstalar = null;
+      cerrar();
+    };
+  }
+  avisoInicio();
 
   // Funciona sin señal: registra el service worker (la raíz de la app es la carpeta de arriba)
   if ("serviceWorker" in navigator) {
