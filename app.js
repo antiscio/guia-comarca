@@ -54,6 +54,9 @@
   const SECCIONES = [
     {
       id: "ubicacion", titulo: "Ubicación y cómo llegar", icono: "pin",
+      // El botón del menú abre Google Maps directo; las indicaciones van en el mismo botón
+      externo: () => A.mapsUrl,
+      nota: () => (A.indicaciones || []).join(" "),
       render: () =>
         (A.fotoFachada ? `<img class="foto" src="${esc(A.fotoFachada)}" alt="Fachada de ${esc(A.nombre)}">` : "") +
         (A.indicaciones ? card("", lista(A.indicaciones)) : "") +
@@ -63,6 +66,7 @@
     },
     {
       id: "checkin", titulo: "Check-in / Check-out", icono: "key",
+      etiqueta: () => "Check-in 15 h<br>Check-out 10 h",
       render: () =>
         `<div class="horarios">
           <div><span class="etq">Check-in</span><strong>15 h</strong><small>${esc(CHECKIN.entrada)}</small></div>
@@ -212,8 +216,12 @@
 
   function menu() {
     return `<header class="cabecera">${logo}<p class="tipo">${esc(A.tipo)}</p></header>
-      <main class="menu">${SECCIONES.map((s) =>
-        `<a class="boton" href="#${s.id}"><span class="ico">${ICON[s.icono]}</span><span>${esc(s.titulo)}</span></a>`).join("")}</main>
+      <main class="menu">${SECCIONES.map((s) => {
+        const url = s.externo && s.externo();
+        const nota = s.nota && s.nota();
+        return `<a class="boton" href="${url ? esc(url) : "#" + s.id}"${url ? ' target="_blank" rel="noopener"' : ""}><span class="ico">${ICON[s.icono]}</span>
+          <span>${s.etiqueta ? s.etiqueta() : esc(s.titulo)}${nota ? `<small class="boton-nota">${esc(nota)}</small>` : ""}</span></a>`;
+      }).join("")}</main>
       ${A.instagram ? `<footer class="pie"><a href="https://instagram.com/${esc(A.instagram)}" target="_blank" rel="noopener">${ICON.ig} Seguinos en Instagram</a></footer>` : ""}`;
   }
 
