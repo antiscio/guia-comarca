@@ -458,7 +458,7 @@ const ALOJAMIENTOS = {
     instagram: "ginkgo_patagonia_departamento",
     booking: "https://www.booking.com/hotel/ar/ginkgo-patagonia.es.html",
     airbnb: "https://www.airbnb.com.ar/rooms/937079193870992415",
-    contacto: { nombre: "Victoria" },   // PROVISORIO: falta el teléfono
+    contacto: { nombre: "Victoria", telefono: "294 460-5201", tel: "+5492944605201" },
     wifi: { red: "", clave: "" },       // PENDIENTE
     reglamento: [
       "No se fuma adentro.",
