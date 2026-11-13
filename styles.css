@@ -22,15 +22,15 @@
 }
 [data-alojamiento="ginkgo"] {
   --bg: #f0e6d2;            /* Ginkgo: fondo crema tirando a beige */
-  --surface: #f2b941;       /* tarjetas en el dorado de las hojas del logo */
+  --surface: #d4a94b;       /* tarjetas en el dorado de las hojas del logo */
   --line: rgba(36, 85, 125, .28);
   --acento: #24557d;        /* azul del logo: íconos, círculos, botones */
-  --acento-suave: #f7dc9c;
+  --acento-suave: #ecd59e;
   --azul: #24557d;
   --ink: #1d3a57;           /* letras en azul */
   --muted: #4d5e6e;
 }
-[data-alojamiento="ginkgo"] .logo { border-radius: 50%; box-shadow: 0 0 0 1.5px #f2b941, 0 14px 34px -16px rgba(23, 52, 79, .55); }
+[data-alojamiento="ginkgo"] .logo { border-radius: 50%; box-shadow: 0 0 0 1.5px #d4a94b, 0 14px 34px -16px rgba(23, 52, 79, .55); }
 [data-alojamiento="ginkgo"] .bienvenida .logo { width: 210px; }
 [data-alojamiento="ginkgo"] .cabecera .logo { width: 124px; }
 /* lo que va directo sobre el fondo crema, en azul */
