@@ -14,13 +14,13 @@
   --bg: #e2eaee;            /* Kalimera: celeste neutro de fondo, para que resalte el logo beige */
   --surface: #f5efe3;       /* tarjetas en el crema del logo */
   --line: #d2dde2;
-  --acento: #434c4e;        /* gris pizarra del logo */
+  --acento: #6b5444;        /* marrón, como las letras: bordes, íconos y botones */
   --acento-suave: #e6edf0;
   --ink: #5a4a3f;           /* letras en marrón, como "Casa en Lago Puelo" */
   --muted: #8a7a6e;
   --sans: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
-[data-alojamiento="kalimera"] .logo { border-radius: 50%; box-shadow: 0 1px 0 var(--line), 0 10px 30px -18px rgba(40, 45, 46, .35); }
+[data-alojamiento="kalimera"] .logo { border-radius: 50%; border: 1.5px solid var(--acento); box-shadow: 0 1px 0 var(--line), 0 10px 30px -18px rgba(40, 45, 46, .35); }
 [data-alojamiento="kalimera"] .boton .ico { background: transparent; border: 1px solid color-mix(in srgb, var(--acento) 35%, transparent); }
 [data-alojamiento="kalimera"] .bienvenida .logo { width: 220px; }
 [data-alojamiento="kalimera"] .cabecera .logo { width: 132px; }
