@@ -105,7 +105,7 @@ const COMER = {
   ],
 };
 
-// Fotos de Wikimedia Commons (uso libre citando autor y licencia)
+// Fotos: las propias no llevan crédito; las de Wikimedia Commons, autor y licencia (obligatorio)
 const FOTOS = {
   "bosque-tallado": {
     "src": "../img/fotos/bosque-tallado.jpg",
@@ -137,12 +137,6 @@ const FOTOS = {
     "licencia": "CC BY-SA 4.0",
     "url": "https://commons.wikimedia.org/wiki/File:Puerto_patriada.jpg"
   },
-  "corbata-blanca": {
-    "src": "../img/fotos/corbata-blanca.jpg",
-    "autor": "Jmmuguerza",
-    "licencia": "CC BY-SA 4.0",
-    "url": "https://commons.wikimedia.org/wiki/File:La_Catarata_Corbata_Blanca,_El_Hoyo.jpg"
-  },
   "laberinto": {
     "src": "../img/fotos/laberinto.jpg",
     "autor": "KorgM50",
@@ -155,19 +149,35 @@ const FOTOS = {
     "licencia": "CC BY-SA 4.0",
     "url": "https://commons.wikimedia.org/wiki/File:Kayak_Puerto_Patriada_Lago_Epuyen.jpg"
   },
-  "rio-azul": {
-    "src": "../img/fotos/rio-azul.jpg",
-    "autor": "Cadaverexquisito",
-    "licencia": "CC BY-SA 3.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Mirador_del_R%C3%ADo_Azul.jpg"
+  "desemboque": {
+    "src": "../img/fotos/desemboque.jpg"
   },
-  "piltriquitron": {
-    "src": "../img/fotos/piltriquitron.jpg",
-    "autor": "Gastón Cuello",
-    "licencia": "CC BY-SA 3.0",
-    "url": "https://commons.wikimedia.org/wiki/File:Piltriquitron_desde_El_Bols%C3%B3n.jpg"
+  "corbata-blanca": {
+    "src": "../img/fotos/corbata-blanca.jpg"
+  },
+  "bodega-adamow": {
+    "src": "../img/fotos/bodega-adamow.jpg"
+  },
+  "motoco": {
+    "src": "../img/fotos/motoco.jpg"
+  },
+  "rio-azul": {
+    "src": "../img/fotos/rio-azul.jpg"
+  },
+  "valle": {
+    "src": "../img/fotos/valle.jpg"
+  },
+  "otono": {
+    "src": "../img/fotos/otono.jpg"
+  },
+  "cerezas": {
+    "src": "../img/fotos/cerezas.jpg"
+  },
+  "parapente": {
+    "src": "../img/fotos/parapente.jpg"
   }
 };
+
 
 // Paseos compartidos. Las distancias son las del contenido (desde el centro de El Bolsón cuando así figura).
 const PASEOS = [
@@ -215,7 +225,7 @@ const PASEOS = [
     maps: maps("Piscicultura Truchas Río Negro, El Bolsón"),
   },
   {
-    nombre: "Bodega Adamow", lugar: "Cerro Radal, Lago Puelo",
+    nombre: "Bodega Adamow", foto: "bodega-adamow", lugar: "Cerro Radal, Lago Puelo",
     puntos: ["Bodega boutique familiar, a 10 min del centro de Lago Puelo.", "Pinot Noir y Sauvignon Blanc; visitas y degustación."],
     maps: maps("Bodega Adamow, Lago Puelo"),
   },
@@ -228,7 +238,7 @@ const PASEOS = [
     maps: maps("Parque Nacional Lago Puelo"),
   },
   {
-    nombre: "Mirador de los Saltos del Motoco", lugar: "Río Azul",
+    nombre: "Mirador de los Saltos del Motoco", foto: "motoco", lugar: "Río Azul",
     puntos: [
       "Desde la pasarela del río Azul; ~5 km ida y vuelta (~1 h 30), con la Cascada Cárdenas en el camino.",
       "En el camping junto al río Blanco se puede tomar algo.",
@@ -241,7 +251,7 @@ const PASEOS = [
     maps: maps("Laberinto Patagonia, El Hoyo"),
   },
   {
-    nombre: "El Desemboque", lugar: "El Hoyo",
+    nombre: "El Desemboque", foto: "desemboque", lugar: "El Hoyo",
     puntos: ["Donde el río Epuyén desemboca en el lago Puelo. Se cobra entrada.", "Hay un pitranto muy antiguo."],
     maps: maps("El Desemboque, El Hoyo, Chubut"),
   },
@@ -269,7 +279,7 @@ const PASEOS = [
 
 const ACTIVIDADES = [
   { nombre: "Rafting", foto: "rio-azul", texto: "En el río Azul." },
-  { nombre: "Parapente", texto: "En la plataforma del Piltriquitrón." },
+  { nombre: "Parapente", foto: "parapente", texto: "En la plataforma del Piltriquitrón." },
   { nombre: "Cabalgatas", texto: "" },
   { nombre: "Kayak y SUP", foto: "kayak", texto: "Kayak en los lagos y SUP en el lago Epuyén." },
   { nombre: "Trekking con guía", texto: "Con guías habilitados de turismo. La lista se consulta en la oficina de informes.", tel: "+54 294 4498008", etiqueta: "Informes" },
@@ -306,14 +316,14 @@ const AGENDA = { nombre: "Casa del Bicentenario de El Bolsón", texto: "Agenda c
 // Sección "Conocé El Bolsón" (pedida después del contenido original; información de turismo y prensa regional)
 const CONOCE = [
   {
-    titulo: "El valle", foto: "piltriquitron",
+    titulo: "El valle", foto: "valle",
     texto: [
       "El Bolsón está en un valle al pie del cerro Piltriquitrón, rodeado de montañas, ríos y bosques. Es la ciudad principal de la Comarca Andina del Paralelo 42: el paralelo separa Río Negro de Chubut, donde están Lago Puelo, El Hoyo y Epuyén.",
       "En 1984 se declaró Zona No Nuclear, y desde entonces es conocido por su perfil ecológico, sus ferias y sus artesanos. En 2026 cumplió cien años.",
     ],
   },
   {
-    titulo: "El clima",
+    titulo: "El clima", foto: "otono",
     texto: [
       "Tiene un microclima más templado que el de otros lugares de la cordillera. Los veranos son secos, con días calurosos y noches frescas; los inviernos, fríos y lluviosos, con nieve en los cerros.",
       "En otoño los bosques cambian de color. En cualquier época conviene tener algo de abrigo a mano.",
@@ -327,7 +337,7 @@ const CONOCE = [
     ],
   },
   {
-    titulo: "Frutas finas",
+    titulo: "Frutas finas", foto: "cerezas",
     texto: [
       "Frambuesas, frutillas, cerezas, guindas, grosellas, zarzamoras, saúco y casis crecen muy bien en el valle, y son una de las principales producciones de la zona.",
       "Se encuentran frescas en verano y todo el año en dulces, helados y licores. En El Hoyo se hace la Fiesta de la Fruta Fina.",

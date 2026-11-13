@@ -16,8 +16,8 @@
   const p = (t) => (t ? `<p>${esc(t)}</p>` : "");
   const foto = (slug) => {
     const f = FOTOS[slug];
-    return f ? `<figure class="foto-lugar"><img src="${esc(f.src)}" alt="" loading="lazy">
-      <figcaption><a href="${esc(f.url)}" target="_blank" rel="noopener">Foto: ${esc(f.autor)} · ${esc(f.licencia)}</a></figcaption></figure>` : "";
+    return f ? `<figure class="foto-lugar"><img src="${esc(f.src)}" alt="" loading="lazy">${f.url ? `
+      <figcaption><a href="${esc(f.url)}" target="_blank" rel="noopener">Foto: ${esc(f.autor)} · ${esc(f.licencia)}</a></figcaption>` : ""}</figure>` : "";
   };
 
   const ICON = {
