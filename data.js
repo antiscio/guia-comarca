@@ -105,6 +105,70 @@ const COMER = {
   ],
 };
 
+// Fotos de Wikimedia Commons (uso libre citando autor y licencia)
+const FOTOS = {
+  "bosque-tallado": {
+    "src": "../img/fotos/bosque-tallado.jpg",
+    "autor": "Jaqura1",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:BOSQUE_TALLADO.jpg"
+  },
+  "cajon-del-azul": {
+    "src": "../img/fotos/cajon-del-azul.jpg",
+    "autor": "Thalassa16",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:El_Caj%C3%B3n_del_Azul_paisaje.jpg"
+  },
+  "cascada-escondida": {
+    "src": "../img/fotos/cascada-escondida.jpg",
+    "autor": "Isha",
+    "licencia": "CC BY-SA 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Mirador_desde_Cascada_Escondida.jpg"
+  },
+  "lago-puelo": {
+    "src": "../img/fotos/lago-puelo.jpg",
+    "autor": "Isha",
+    "licencia": "Public domain",
+    "url": "https://commons.wikimedia.org/wiki/File:Lago_Puelo.jpg"
+  },
+  "puerto-patriada": {
+    "src": "../img/fotos/puerto-patriada.jpg",
+    "autor": "Guzman Maira",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Puerto_patriada.jpg"
+  },
+  "corbata-blanca": {
+    "src": "../img/fotos/corbata-blanca.jpg",
+    "autor": "Jmmuguerza",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:La_Catarata_Corbata_Blanca,_El_Hoyo.jpg"
+  },
+  "laberinto": {
+    "src": "../img/fotos/laberinto.jpg",
+    "autor": "KorgM50",
+    "licencia": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Laberinto_Patagonia.jpg"
+  },
+  "kayak": {
+    "src": "../img/fotos/kayak.jpg",
+    "autor": "Jmmuguerza",
+    "licencia": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Kayak_Puerto_Patriada_Lago_Epuyen.jpg"
+  },
+  "rio-azul": {
+    "src": "../img/fotos/rio-azul.jpg",
+    "autor": "Cadaverexquisito",
+    "licencia": "CC BY-SA 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Mirador_del_R%C3%ADo_Azul.jpg"
+  },
+  "piltriquitron": {
+    "src": "../img/fotos/piltriquitron.jpg",
+    "autor": "Gastón Cuello",
+    "licencia": "CC BY-SA 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Piltriquitron_desde_El_Bols%C3%B3n.jpg"
+  }
+};
+
 // Paseos compartidos. Las distancias son las del contenido (desde el centro de El Bolsón cuando así figura).
 const PASEOS = [
   {
@@ -113,7 +177,7 @@ const PASEOS = [
     maps: maps("Cerro Amigo, El Bolsón"),
   },
   {
-    nombre: "Cerro Piltriquitrón: Plataforma, Bosque Tallado y Refugio", lugar: "El Bolsón",
+    nombre: "Cerro Piltriquitrón: Plataforma, Bosque Tallado y Refugio", foto: "bosque-tallado", lugar: "El Bolsón",
     puntos: [
       "En auto: 13 km de ripio desde la Ruta 40 sur hasta la Plataforma (~1400 msnm), despegue de parapente (vuelos de bautismo).",
       "A pie: 30–60 min al Bosque Tallado, con unas 60 esculturas (Marcelo López, 1998). Hay baños y agua potable.",
@@ -124,7 +188,7 @@ const PASEOS = [
     maps: maps("Bosque Tallado, Cerro Piltriquitrón, El Bolsón"),
   },
   {
-    nombre: "Wharton – La Confluencia – Refugios del ANPRALE", lugar: "Mallín Ahogado",
+    nombre: "Wharton – La Confluencia – Refugios del ANPRALE", foto: "cajon-del-azul", lugar: "Mallín Ahogado",
     puntos: [
       "Chacra Wharton, en Mallín Ahogado, a 16–17 km del centro. Antes de bajar hay cervecerías y pizza (por ejemplo, Campo Base).",
       "Bajada de ~40 min a La Confluencia (ríos Azul y Encanto Blanco), con camping.",
@@ -136,7 +200,7 @@ const PASEOS = [
     maps: maps("Chacra Wharton, Mallín Ahogado, El Bolsón"),
   },
   {
-    nombre: "Cascada Escondida y Jardín Botánico", lugar: "Mallín Ahogado",
+    nombre: "Cascada Escondida y Jardín Botánico", foto: "cascada-escondida", lugar: "Mallín Ahogado",
     puntos: ["A ~10 km.", "Salto de ~30 m con piletón al pie; senderos de flora nativa.", "Gratuito."],
     maps: maps("Cascada Escondida, El Bolsón"),
   },
@@ -156,7 +220,7 @@ const PASEOS = [
     maps: maps("Bodega Adamow, Lago Puelo"),
   },
   {
-    nombre: "Parque Nacional Lago Puelo", lugar: "Lago Puelo",
+    nombre: "Parque Nacional Lago Puelo", foto: "lago-puelo", lugar: "Lago Puelo",
     puntos: [
       "Navegación: Náutica Puelo (~3 h, hasta 5 pasajeros; traslados a El Turbio).",
       "La Playita por el Sendero del Pitranto Grande (~1 km), y un sendero corto al Mirador de La Playita.",
@@ -172,7 +236,7 @@ const PASEOS = [
     maps: maps("Saltos del Motoco"),
   },
   {
-    nombre: "Laberinto Patagonia", lugar: "El Hoyo",
+    nombre: "Laberinto Patagonia", foto: "laberinto", lugar: "El Hoyo",
     puntos: ["Camino a El Desemboque km 3,7.", "~8000 m² y 2,2 km de sendero. Confitería, restaurante, helados, sidra de hielo."],
     maps: maps("Laberinto Patagonia, El Hoyo"),
   },
@@ -182,12 +246,12 @@ const PASEOS = [
     maps: maps("El Desemboque, El Hoyo, Chubut"),
   },
   {
-    nombre: "Puerto Patriada", lugar: "Lago Epuyén",
+    nombre: "Puerto Patriada", foto: "puerto-patriada", lugar: "Lago Epuyén",
     puntos: ["De los lugares más lindos de la Comarca.", "Agua tranquila, ideal para SUP y kayak. Camping, proveeduría y restaurante."],
     maps: maps("Puerto Patriada, Lago Epuyén"),
   },
   {
-    nombre: "Cascada Corbata Blanca", lugar: "El Hoyo",
+    nombre: "Cascada Corbata Blanca", foto: "corbata-blanca", lugar: "El Hoyo",
     puntos: ["Estacionamiento pago.", "Sendero de ~35 min entre cipreses y coihues."],
     maps: maps("Cascada Corbata Blanca, El Hoyo"),
   },
@@ -204,10 +268,10 @@ const PASEOS = [
 ];
 
 const ACTIVIDADES = [
-  { nombre: "Rafting", texto: "En el río Azul." },
+  { nombre: "Rafting", foto: "rio-azul", texto: "En el río Azul." },
   { nombre: "Parapente", texto: "En la plataforma del Piltriquitrón." },
   { nombre: "Cabalgatas", texto: "" },
-  { nombre: "Kayak y SUP", texto: "Kayak en los lagos y SUP en el lago Epuyén." },
+  { nombre: "Kayak y SUP", foto: "kayak", texto: "Kayak en los lagos y SUP en el lago Epuyén." },
   { nombre: "Trekking con guía", texto: "Con guías habilitados de turismo. La lista se consulta en la oficina de informes.", tel: "+54 294 4498008", etiqueta: "Informes" },
   { nombre: "Alquiler de bicicletas", texto: "" },
   {
@@ -242,7 +306,7 @@ const AGENDA = { nombre: "Casa del Bicentenario de El Bolsón", texto: "Agenda c
 // Sección "Conocé El Bolsón" (pedida después del contenido original; información de turismo y prensa regional)
 const CONOCE = [
   {
-    titulo: "El valle",
+    titulo: "El valle", foto: "piltriquitron",
     texto: [
       "El Bolsón está en un valle al pie del cerro Piltriquitrón, rodeado de montañas, ríos y bosques. Es la ciudad principal de la Comarca Andina del Paralelo 42: el paralelo separa Río Negro de Chubut, donde están Lago Puelo, El Hoyo y Epuyén.",
       "En 1984 se declaró Zona No Nuclear, y desde entonces es conocido por su perfil ecológico, sus ferias y sus artesanos. En 2026 cumplió cien años.",

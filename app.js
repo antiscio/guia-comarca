@@ -14,6 +14,11 @@
   const lista = (items) => `<ul class="list">${items.map((i) => `<li>${typeof i === "string" ? esc(i) : esc(i.texto) + " " + mapsBtn(i.maps)}</li>`).join("")}</ul>`;
   const card = (titulo, cuerpo, extra = "") => `<section class="card">${titulo ? `<h3>${esc(titulo)}</h3>` : ""}${cuerpo}${extra}</section>`;
   const p = (t) => (t ? `<p>${esc(t)}</p>` : "");
+  const foto = (slug) => {
+    const f = FOTOS[slug];
+    return f ? `<figure class="foto-lugar"><img src="${esc(f.src)}" alt="" loading="lazy">
+      <figcaption><a href="${esc(f.url)}" target="_blank" rel="noopener">Foto: ${esc(f.autor)} · ${esc(f.licencia)}</a></figcaption></figure>` : "";
+  };
 
   const ICON = {
     arrow: `<svg class="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>`,
@@ -129,7 +134,7 @@
       tabs: [
         {
           id: "paseos", titulo: "Paseos",
-          render: () => PASEOS.map((x) => `<section class="card">
+          render: () => PASEOS.map((x) => `<section class="card">${foto(x.foto)}
               <span class="etq">${esc(x.lugar)}</span><h3>${esc(x.nombre)}</h3>${lista(x.puntos)}
               <div class="acciones">${(x.enlaces || []).map((l) => ext(l.url, l.etiqueta, "chip")).join("")}${mapsBtn(x.maps)}</div>
             </section>`).join("") + `<p class="nota">${esc(INVIERNO_NOTA)}</p>`,
@@ -137,7 +142,7 @@
         {
           id: "aventura", titulo: "Actividades",
           render: () => ACTIVIDADES.map((x) => card(x.nombre,
-            p(x.texto) + (x.lugares ? `<ul class="list">${x.lugares.map((l) => `<li>${esc(l.nombre)} ${mapsBtn(l.maps)}</li>`).join("")}</ul>` : ""),
+            foto(x.foto) + p(x.texto) + (x.lugares ? `<ul class="list">${x.lugares.map((l) => `<li>${esc(l.nombre)} ${mapsBtn(l.maps)}</li>`).join("")}</ul>` : ""),
             x.tel ? `<a class="chip" href="${telHref(x.tel)}">${ICON.phone} ${esc(x.etiqueta)} · ${esc(x.tel)}</a>` : "")).join("") +
             card("Agenda cultural", `<p>${esc(AGENDA.nombre)}</p>`, mapsBtn(AGENDA.maps)),
         },
@@ -179,7 +184,7 @@
     },
     {
       id: "conoce", titulo: "Conocé El Bolsón", icono: "leaf",
-      render: () => CONOCE.map((b) => card(b.titulo, b.texto.map(p).join(""))).join(""),
+      render: () => CONOCE.map((b) => card(b.titulo, foto(b.foto) + b.texto.map(p).join(""))).join(""),
     },
   ];
 
