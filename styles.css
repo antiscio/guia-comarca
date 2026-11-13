@@ -21,7 +21,7 @@
   --sans: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 [data-alojamiento="ginkgo"] {
-  --bg: #fbf7ec;            /* Ginkgo: fondo crema, como las letras del logo */
+  --bg: #f0e6d2;            /* Ginkgo: fondo crema tirando a beige */
   --surface: #24557d;       /* tarjetas en el azul del logo */
   --line: rgba(251, 247, 236, .22);
   --acento: #d9ac3f;        /* dorado de las hojas de ginkgo */
@@ -38,10 +38,11 @@
 [data-alojamiento="ginkgo"] .tipo, [data-alojamiento="ginkgo"] .texto-bienvenida, [data-alojamiento="ginkgo"] .sub,
 [data-alojamiento="ginkgo"] .barra h1, [data-alojamiento="ginkgo"] .barra .ico, [data-alojamiento="ginkgo"] .pie a,
 [data-alojamiento="ginkgo"] .contenido > .nota, [data-alojamiento="ginkgo"] .contenido > .link { color: var(--azul); }
-[data-alojamiento="ginkgo"] .barra { border-bottom-color: #e6dcc3; }
+[data-alojamiento="ginkgo"] .barra { border-bottom-color: #dccfb4; }
 /* sobre dorado o dorado suave, letra azul */
 [data-alojamiento="ginkgo"] .btn-primario, [data-alojamiento="ginkgo"] .tabs a.activa { color: #16344f; }
-[data-alojamiento="ginkgo"] .boton .ico, [data-alojamiento="ginkgo"] .num,
+[data-alojamiento="ginkgo"] .boton .ico { background: transparent; border: 1.5px solid var(--acento); color: var(--acento); } /* íconos dorados en círculo dorado */
+[data-alojamiento="ginkgo"] .num,
 [data-alojamiento="ginkgo"] .numerada li::before { color: var(--azul); }
 [data-alojamiento="kalimera"] .logo { border-radius: 50%; border: 1.5px solid var(--acento); box-shadow: 0 1px 0 var(--line), 0 10px 30px -18px rgba(40, 45, 46, .35); }
 [data-alojamiento="kalimera"] .boton .ico { background: transparent; border: 1px solid color-mix(in srgb, var(--acento) 35%, transparent); }
