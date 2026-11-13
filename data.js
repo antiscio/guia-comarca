@@ -164,8 +164,11 @@ const FOTOS = {
   "rio-azul": {
     "src": "../img/fotos/rio-azul.jpg"
   },
-  "valle": {
-    "src": "../img/fotos/valle.jpg"
+  "flores-centro": {
+    "src": "../img/fotos/flores-centro.jpg"
+  },
+  "flores-pico": {
+    "src": "../img/fotos/flores-pico.jpg"
   },
   "cerro-amigo": {
     "src": "../img/fotos/cerro-amigo.jpg"
@@ -319,7 +322,7 @@ const AGENDA = { nombre: "Casa del Bicentenario de El Bolsón", texto: "Agenda c
 // Sección "Conocé El Bolsón" (pedida después del contenido original; información de turismo y prensa regional)
 const CONOCE = [
   {
-    titulo: "El valle", foto: "valle",
+    titulo: "El valle", foto: ["flores-centro", "flores-pico"],
     texto: [
       "El Bolsón está en un valle al pie del cerro Piltriquitrón, rodeado de montañas, ríos y bosques. Es la ciudad principal de la Comarca Andina del Paralelo 42: el paralelo separa Río Negro de Chubut, donde están Lago Puelo, El Hoyo y Epuyén.",
       "En 1984 se declaró Zona No Nuclear, y desde entonces es conocido por su perfil ecológico, sus ferias y sus artesanos. En 2026 cumplió cien años.",

@@ -15,6 +15,8 @@
   const card = (titulo, cuerpo, extra = "") => `<section class="card">${titulo ? `<h3>${esc(titulo)}</h3>` : ""}${cuerpo}${extra}</section>`;
   const p = (t) => (t ? `<p>${esc(t)}</p>` : "");
   const foto = (slug) => {
+    // Varias fotos: van completas, sin recortar, una al lado de la otra
+    if (Array.isArray(slug)) return `<div class="foto-par">${slug.map((x) => FOTOS[x] ? `<img src="${esc(FOTOS[x].src)}" alt="" loading="lazy">` : "").join("")}</div>`;
     const f = FOTOS[slug];
     return f ? `<figure class="foto-lugar"><img src="${esc(f.src)}" alt="" loading="lazy">${f.url ? `
       <figcaption><a href="${esc(f.url)}" target="_blank" rel="noopener">Foto: ${esc(f.autor)} · ${esc(f.licencia)}</a></figcaption>` : ""}</figure>` : "";
