@@ -21,6 +21,7 @@
   --sans: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 [data-alojamiento="kalimera"] .logo { border-radius: 50%; box-shadow: 0 1px 0 var(--line), 0 10px 30px -18px rgba(40, 45, 46, .35); }
+[data-alojamiento="kalimera"] .boton .ico { background: transparent; border: 1px solid color-mix(in srgb, var(--acento) 35%, transparent); }
 [data-alojamiento="kalimera"] .bienvenida .logo { width: 220px; }
 [data-alojamiento="kalimera"] .cabecera .logo { width: 132px; }
 
