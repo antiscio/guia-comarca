@@ -54,19 +54,28 @@ const EMERGENCIAS = {
 const EMERGENCIAS_NOTA =
   "Desde algunos celulares los números cortos pueden comunicar con otra localidad; conviene usar los números directos.";
 
+// localidad: solo se muestra en la guía de esa localidad (Lago Puelo, pedido para Kalimera); sin localidad, en todas
 const INFO_TURISTICA = [
   {
-    nombre: "Centro de Informes Turísticos",
+    id: "turismoBolson",
+    nombre: "Centro de Informes Turísticos de El Bolsón",
     texto: "Av. Belgrano y Pastorino (entrada sur, Ruta 40).",
     tel: "+54 294 4498008",
     email: "turismo@elbolson.gov.ar",
     maps: maps("Centro de Informes Turísticos, Av. Belgrano y Pastorino, El Bolsón"),
   },
   {
-    nombre: "Informes de Montaña",
+    nombre: "Informes de Montaña de El Bolsón",
     texto: "Mario J. Guasco y Perito Moreno, junto a la plaza. De 8 a 20 h.",
     whatsapp: "+54 9 294 4929496",
     maps: maps("Informes de Montaña, Mario J. Guasco y Perito Moreno, El Bolsón"),
+  },
+  {
+    nombre: "Centro de Informes Turísticos de Lago Puelo", localidad: "Lago Puelo",
+    texto: "Av. 2 de Abril y Av. Los Notros, frente a la plaza. Atención telefónica todos los días de 8 a 19 h.",
+    tel: "+54 9 294 4141353",
+    email: "info.turismo@lagopuelo.gob.ar",
+    maps: maps("Oficina de Turismo, Av. 2 de Abril y Av. Los Notros, Lago Puelo, Chubut"),
   },
 ];
 

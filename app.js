@@ -15,7 +15,7 @@
   const card = (titulo, cuerpo, extra = "") => `<section class="card">${titulo ? `<h3>${esc(titulo)}</h3>` : ""}${cuerpo}${extra}</section>`;
   // Actividades sin lugar fijo: se piden informes en la oficina de turismo de El Bolsón
   const informes = () => {
-    const t = INFO_TURISTICA[0];
+    const t = INFO_TURISTICA.find((x) => x.id === "turismoBolson");
     return `<p class="nota">Informes en el ${esc(t.nombre)}.</p>
       <div class="acciones"><a class="chip" href="${telHref(t.tel)}">${ICON.phone} ${esc(t.tel)}</a>${mapsBtn(t.maps)}</div>`;
   };
@@ -119,7 +119,9 @@
         const emerg = EMERGENCIAS[A.localidad].map((e) =>
           `<li class="emerg"><span>${esc(e.nombre)}</span><span class="nums">${nums(e.corto)}${nums(e.directo)}</span></li>`).join("");
         const serv = A.servicios.map((s) => card(s.titulo, lista(s.items), s.enlace ? enlace(s.enlace, s.etiqueta) : "")).join("");
-        const tur = INFO_TURISTICA.map((t) => card(t.nombre,
+        // La oficina de la localidad del alojamiento va primero
+        const tur = INFO_TURISTICA.filter((t) => !t.localidad || t.localidad === A.localidad)
+          .sort((a, b) => (b.localidad === A.localidad) - (a.localidad === A.localidad)).map((t) => card(t.nombre,
           p(t.texto) +
           `<div class="acciones">
             ${t.tel ? `<a class="chip" href="${telHref(t.tel)}">${ICON.phone} ${esc(t.tel)}</a>` : ""}
