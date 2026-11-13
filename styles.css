@@ -22,26 +22,34 @@
 }
 [data-alojamiento="ginkgo"] {
   --bg: #f0e6d2;            /* Ginkgo: fondo crema tirando a beige */
-  --surface: #d4a94b;       /* tarjetas en el dorado de las hojas del logo */
-  --line: rgba(36, 85, 125, .28);
-  --acento: #24557d;        /* azul del logo: íconos, círculos, botones */
-  --acento-suave: #ecd59e;
+  --surface: #2a5c89;       /* tarjetas en el azul medio del logo (con su textura, abajo) */
+  --line: rgba(244, 188, 76, .55);
+  --acento: #f4bc4c;        /* dorado vibrante de las hojas del logo */
+  --acento-suave: #f4e3b5;
   --azul: #24557d;
-  --ink: #1d3a57;           /* letras en azul */
-  --muted: #4d5e6e;
+  --ink: #fbf7ec;           /* letras de las tarjetas en marfil */
+  --muted: #cfdbe6;
 }
-[data-alojamiento="ginkgo"] .logo { border-radius: 50%; box-shadow: 0 0 0 1.5px #d4a94b, 0 14px 34px -16px rgba(23, 52, 79, .55); }
+[data-alojamiento="ginkgo"] .logo { border-radius: 50%; box-shadow: 0 0 0 1.5px var(--acento), 0 14px 34px -16px rgba(23, 52, 79, .55); }
 [data-alojamiento="ginkgo"] .bienvenida .logo { width: 210px; }
 [data-alojamiento="ginkgo"] .cabecera .logo { width: 124px; }
+/* tarjetas con la textura despareja del azul del logo */
+[data-alojamiento="ginkgo"] .boton, [data-alojamiento="ginkgo"] .card, [data-alojamiento="ginkgo"] .tabs a,
+[data-alojamiento="ginkgo"] .horarios > div, [data-alojamiento="ginkgo"] .wifi, [data-alojamiento="ginkgo"] .volver {
+  background: var(--surface) url(img/textura-ginkgo.jpg) center / cover;
+}
 /* lo que va directo sobre el fondo crema, en azul */
 [data-alojamiento="ginkgo"] .tipo, [data-alojamiento="ginkgo"] .texto-bienvenida, [data-alojamiento="ginkgo"] .sub,
 [data-alojamiento="ginkgo"] .barra h1, [data-alojamiento="ginkgo"] .barra .ico, [data-alojamiento="ginkgo"] .pie a,
 [data-alojamiento="ginkgo"] .contenido > .nota, [data-alojamiento="ginkgo"] .contenido > .link { color: var(--azul); }
 [data-alojamiento="ginkgo"] .barra { border-bottom-color: #dccfb4; }
-[data-alojamiento="ginkgo"] .volver { color: var(--azul); }
-/* íconos azules en círculo azul, sin relleno */
-[data-alojamiento="ginkgo"] .boton .ico { background: transparent; border: 1.5px solid var(--acento); color: var(--acento); }
-[data-alojamiento="ginkgo"] .btn-primario, [data-alojamiento="ginkgo"] .tabs a.activa { color: #fbf3df; }
+[data-alojamiento="ginkgo"] .volver { color: var(--acento); }
+/* íconos dorados en círculo dorado, adentro el azul de la tarjeta */
+[data-alojamiento="ginkgo"] .boton .ico { background: transparent; border: 2px solid var(--acento); color: var(--acento); }
+[data-alojamiento="ginkgo"] .boton .ico svg { stroke-width: 2; }
+[data-alojamiento="ginkgo"] .boton, [data-alojamiento="ginkgo"] .card { border-width: 1.5px; }
+[data-alojamiento="ginkgo"] .btn-primario, [data-alojamiento="ginkgo"] .tabs a.activa { background: var(--acento); color: #16344f; }
+[data-alojamiento="ginkgo"] .num, [data-alojamiento="ginkgo"] .numerada li::before { color: var(--azul); }
 [data-alojamiento="kalimera"] .logo { border-radius: 50%; border: 1.5px solid var(--acento); box-shadow: 0 1px 0 var(--line), 0 10px 30px -18px rgba(40, 45, 46, .35); }
 [data-alojamiento="kalimera"] .boton .ico { background: transparent; border: 1px solid color-mix(in srgb, var(--acento) 35%, transparent); }
 [data-alojamiento="kalimera"] .bienvenida .logo { width: 220px; }

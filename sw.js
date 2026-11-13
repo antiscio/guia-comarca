@@ -1,12 +1,12 @@
 // Guarda la app en el celular para que funcione sin señal.
 // Al cambiar cualquier contenido, subir el número de versión para que los huéspedes reciban lo nuevo.
-const VERSION = "guia-v62";
+const VERSION = "guia-v63";
 const ARCHIVOS = [
   "./styles.css", "./data.js", "./app.js",
   "./casis/", "./casis/index.html", "./casis/manifest.webmanifest",
   "./kalimera/", "./kalimera/index.html", "./kalimera/manifest.webmanifest",
   "./ginkgo/", "./ginkgo/index.html", "./ginkgo/manifest.webmanifest",
-  "./img/logo-casis.svg", "./img/logo-kalimera.png", "./img/logo-ginkgo.png",
+  "./img/logo-casis.svg", "./img/logo-kalimera.png", "./img/logo-ginkgo.png", "./img/textura-ginkgo.jpg",
   "./img/icono-casis-192.png", "./img/icono-kalimera-192.png", "./img/icono-ginkgo-192.png",
   "./img/fotos/bodega-adamow.jpg", "./img/fotos/bosque-tallado.jpg", "./img/fotos/cajon-del-azul.jpg", "./img/fotos/cascada-escondida.jpg", "./img/fotos/cerro-amigo.jpg", "./img/fotos/cerezas.jpg", "./img/fotos/corbata-blanca.jpg", "./img/fotos/desemboque.jpg", "./img/fotos/kayak.jpg", "./img/fotos/laberinto.jpg", "./img/fotos/lago-puelo.jpg", "./img/fotos/motoco.jpg", "./img/fotos/otono.jpg", "./img/fotos/parapente.jpg", "./img/fotos/puerto-patriada.jpg", "./img/fotos/rio-azul.jpg", "./img/fotos/flores-centro.jpg", "./img/fotos/flores-pico.jpg", "./img/fotos/epuyen.jpg", "./img/fotos/parva.jpg",
 ];
