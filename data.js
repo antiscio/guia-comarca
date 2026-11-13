@@ -290,7 +290,7 @@ const ALOJAMIENTOS = {
     tipo: "Casa en Lago Puelo",
     logo: "../img/logo-kalimera.png",
     localidad: "Lago Puelo",
-    mapsUrl: "",   // PENDIENTE: enlace de Google Maps a la casa
+    mapsUrl: "https://maps.app.goo.gl/Gx6hEY7VXUV2xioi6",
     fotoFachada: "",
     instagram: "kalimera.casadehuespedes",
     booking: "https://www.booking.com/hotel/ar/kalimera-casa-de-huespedes.es.html",
