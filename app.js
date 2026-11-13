@@ -77,7 +77,7 @@
     {
       id: "contacto", titulo: "Contacto", icono: "phone",
       render: () =>
-        card(FRANCISCO.nombre, `<p class="grande">${esc(FRANCISCO.telefono)}</p><p>Siempre atento.</p>
+        card(FRANCISCO.nombre, `<p class="grande">${esc(FRANCISCO.telefono)}</p>
           <div class="acciones">
             <a class="btn-primario" href="${waHref(FRANCISCO.tel)}" target="_blank" rel="noopener">${ICON.wa} Escribir por WhatsApp</a>
           </div>`) +
