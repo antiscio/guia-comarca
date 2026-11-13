@@ -437,7 +437,9 @@ const ALOJAMIENTOS = {
       "No se fuma adentro. En el parque se puede fumar, sin tirar colillas.",
       "Por respeto a los vecinos, les pedimos bajar el volumen después de las 22 h.",
       "No se aceptan mascotas.",
+      "No se puede hacer asado, salvo que antes verifiquen que ese día está habilitado y no hay riesgo de incendio.",
     ],
+    reglamentoEnlace: { enlace: "splif", etiqueta: "Ver si hoy se puede hacer fuego (SPLIF)" },
     comodidades: {
       intro: [
         "Sobre la Ruta 16, a unos 800 m del ingreso al lago.",

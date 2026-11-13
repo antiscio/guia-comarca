@@ -110,7 +110,7 @@
     },
     {
       id: "reglamento", titulo: "Reglamento", icono: "rules",
-      render: () => card("", lista(A.reglamento)),
+      render: () => card("", lista(A.reglamento), A.reglamentoEnlace ? enlace(A.reglamentoEnlace.enlace, A.reglamentoEnlace.etiqueta) : ""),
     },
     {
       id: "info", titulo: "Información importante", icono: "info",
